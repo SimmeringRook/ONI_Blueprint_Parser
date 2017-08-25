@@ -1,9 +1,5 @@
 ﻿using ONI_Blueprint_Parser.Blueprint.Buildings;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ONI_Blueprint_Parser.Blueprint
 {
@@ -18,13 +14,17 @@ namespace ONI_Blueprint_Parser.Blueprint
 
         public List<Building> Buildings;
 
-        internal Blueprint(string name, int x, int y)
+        public string FileLocation;
+
+        internal Blueprint(string name, int x, int y, string fileLocation)
         {
             Name = name;
             Size_X = x;
             Size_Y = y;
             Cells = new List<Cell>();
             Buildings = new List<Building>();
+
+            FileLocation = fileLocation;
         }
     }
 }

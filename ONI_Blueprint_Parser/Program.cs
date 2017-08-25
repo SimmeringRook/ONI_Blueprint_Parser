@@ -16,7 +16,7 @@ namespace ONI_Blueprint_Parser
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ONI_BlueprintForm());
         }
     }
 }

@@ -9,22 +9,28 @@ namespace ONI_Blueprint_Parser.Parser
 {
     class Parser
     {
-        string blueprintPath;
-        public Parser (string pathOfBlueprint)
+        public string BlueprintPath;
+
+        public Parser()
         {
-            blueprintPath = pathOfBlueprint;
+
         }
 
+        /// <summary>
+        /// Attempts to return a parsed Blueprint
+        /// </summary>
+        /// <param name="blueprint"></param>
+        /// <returns></returns>
         public bool GetBlueprint(out Blueprint.Blueprint blueprint)
         {
             //Check the path
-            if (blueprintPath.Equals(string.Empty))
+            if (BlueprintPath.Equals(string.Empty))
             {
                 throw new Exception("The path to the blueprint file was empty.");
             }
 
             //Verify the system can see the file
-            if (File.Exists(blueprintPath) == false)
+            if (File.Exists(BlueprintPath) == false)
             {
                 throw new Exception("The file, \"{0}\", could not be found.");
             }
@@ -43,6 +49,12 @@ namespace ONI_Blueprint_Parser.Parser
             }
         }
 
+
+        /// <summary>
+        /// Attempt to read in the raw data from the .yaml file, and convert into a blueprint
+        /// </summary>
+        /// <param name="bluePrint"></param>
+        /// <returns></returns>
         private bool TryReadBlueprint(out Blueprint.Blueprint bluePrint)
         {
             //Read in raw data
@@ -50,7 +62,7 @@ namespace ONI_Blueprint_Parser.Parser
             List<string> unparsedCellData = new List<string>();
             List<string> unparsedBuildingData = new List<string>();
 
-            using (StreamReader reader = new StreamReader(blueprintPath))
+            using (StreamReader reader = new StreamReader(BlueprintPath))
             {
                 bool headerDataComplete = false;
                 bool cellDataComplete = false;
@@ -63,10 +75,10 @@ namespace ONI_Blueprint_Parser.Parser
                 {
                     lineOfData = reader.ReadLine();
 
-                    if (!headerDataComplete && lineOfData.Split(':')[0].Equals("cells:"))
+                    if (!headerDataComplete && lineOfData.Split(':')[0].Equals("cells"))
                         headerDataComplete = true;
 
-                    if (!cellDataComplete && lineOfData.Split(':')[0].Equals("buildings:"))
+                    if (!cellDataComplete && lineOfData.Split(':')[0].Equals("buildings"))
                         cellDataComplete = true;
 
                     if (!buildingDataComplete && lineOfData.Split(':')[0].Equals("pickupables"))
@@ -130,7 +142,7 @@ namespace ONI_Blueprint_Parser.Parser
             /* Unused */
             int area = int.Parse(RemoveExcess(unparsedBlueprintHeader[index]));
 
-            return new Blueprint.Blueprint(name, size_X, size_Y);
+            return new Blueprint.Blueprint(name, size_X, size_Y, BlueprintPath);
         }
 
         /// <summary>
@@ -142,21 +154,38 @@ namespace ONI_Blueprint_Parser.Parser
         {
             List<Cell> parsedCells = new List<Cell>();
 
-            //Need to start at index of 1
-            //Index of 0 is "cells:"
-            for (int cellIndex = 1; cellIndex < unparsedCellData.Count; cellIndex++)
-            {
-                Elements element = (Elements)Enum.Parse(typeof(Elements), RemoveExcess(unparsedCellData[cellIndex]));
-                cellIndex++;
-                int mass = int.Parse(RemoveExcess(unparsedCellData[cellIndex]));
-                cellIndex++;
-                int temperature = int.Parse(RemoveExcess(unparsedCellData[cellIndex]));
-                cellIndex++;
-                int location_x = int.Parse(RemoveExcess(unparsedCellData[cellIndex]));
-                cellIndex++;
-                int location_y = int.Parse(RemoveExcess(unparsedCellData[cellIndex]));
+            Cell tempCell = new Cell();
 
-                parsedCells.Add(new Cell(location_x, location_y, element, mass, temperature));
+            foreach (string cellData in unparsedCellData)
+            {
+                string[] data = cellData.Split(':');
+
+                switch (data[0].TrimStart(new char[]{' ', '-'}))
+                {
+                    case "element":
+                        if (tempCell.Element.HasValue)
+                        {
+                            parsedCells.Add(tempCell); //assume complete object, add and create new holder
+                            tempCell = new Cell();
+                        }
+
+                        tempCell.Element = (Element)Enum.Parse(typeof(Element), data[1]);
+                        break;
+                    case "mass":
+                        tempCell.Mass = double.Parse(data[1]);
+                        break;
+                    case "temperature":
+                        tempCell.Temperature = double.Parse(data[1]);
+                        break;
+                    case "location_x":
+                        tempCell.Location_X = int.Parse(data[1]);
+                        break;
+                    case "location_y":
+                        tempCell.Location_Y = int.Parse(data[1]);
+                        break;
+                    default:
+                        break;
+                }
             }
 
             return parsedCells;
@@ -170,52 +199,57 @@ namespace ONI_Blueprint_Parser.Parser
         /// <returns></returns>
         private List<Building> ParseBuildingData(List<string> unparsedBuildingData, List<Cell> Cells)
         {
-            List<Building> parsedCells = new List<Building>();
+            List<Building> parsedBuildings = new List<Building>();
 
-            //Need to start at index of 1
-            //Index of 0 is "cells:"
-            for (int index = 1; index < unparsedBuildingData.Count; index++)
+            Building tempBuilding = new Building();
+
+            foreach (string cellData in unparsedBuildingData)
             {
-                BuildingName id = (BuildingName)Enum.Parse(typeof(BuildingName), RemoveExcess(unparsedBuildingData[index]));
-                index++;
+                string[] data = cellData.Split(':');
 
-                int location_x = int.Parse(RemoveExcess(unparsedBuildingData[index]));
-                index++;
-                int location_y = int.Parse(RemoveExcess(unparsedBuildingData[index]));
-                index++;
-
-                Cell cell = Cells.Where(c => c.Location_X == location_x && c.Location_Y == location_y).FirstOrDefault();
-                if (cell != null)
+                switch (data[0].TrimStart(new char[] { ' ', '-' }))
                 {
-                    parsedCells.Add(new Building(id, cell));
-                    index += 5;
-                }
-                else
-                {
-                    Elements element = (Elements)Enum.Parse(typeof(Elements), RemoveExcess(unparsedBuildingData[index]));
-                    index++;
+                    case "id":
+                        EntityID id = (EntityID)Enum.Parse(typeof(EntityID), data[1]);
+                        if (id != EntityID.FieldRation)
+                            tempBuilding.ID = (EntityID)Enum.Parse(typeof(EntityID), data[1]);
+                        break;
+                    case "temperature":
+                        tempBuilding.Temperature = double.Parse(data[1]);
+                        break;
+                    case "location_x":
+                        tempBuilding.Location_X = int.Parse(data[1]);
+                        break;
+                    case "location_y":
+                        tempBuilding.Location_Y = int.Parse(data[1]);
+                        break;
 
-                    int temperature = int.Parse(RemoveExcess(unparsedBuildingData[index]));
-                    index++;
+                    case "storage":
+                        if (tempBuilding.ID.HasValue)
+                        {
 
-                    /* Unused */
-                    string storage = RemoveExcess(unparsedBuildingData[index]);
-                    index++;
-                    string rottable = RemoveExcess(unparsedBuildingData[index]);
-                    index++;
-                    string amounts = RemoveExcess(unparsedBuildingData[index]);
-                    index++;
-                    string other_values = RemoveExcess(unparsedBuildingData[index]);
+                            Cell associatedCell = Cells.Where(c =>
+                            c.Location_X == tempBuilding.Location_X &&
+                            c.Location_Y == tempBuilding.Location_Y).FirstOrDefault();
+                            if (associatedCell != null)
+                            {
+                                tempBuilding = new Building(tempBuilding.ID.Value, associatedCell);
+                            }
 
-                    parsedCells.Add(new Building(id, location_x, location_y, element));
+                            parsedBuildings.Add(tempBuilding); //assume complete object, add and create new holder
+                            tempBuilding = new Building();
+                        }
+                        break;
+                    default:
+                        break;
                 }
             }
 
-            return parsedCells;
+            return parsedBuildings;
         }
 
         private string RemoveExcess(string dataLine)
-        {
+        {//TODO:: Refactor or Remove
             return dataLine.Split(':')[1];
         }
     }

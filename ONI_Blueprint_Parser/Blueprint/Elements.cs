@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ONI_Blueprint_Parser.Blueprint
+﻿namespace ONI_Blueprint_Parser.Blueprint
 {
-    enum Elements
+    enum Element
     {
-        Sandstone,
+        SandStone,
         Obsidian,
         SedimentaryRock,
         IronOre,
-        Dirt
+        Oxygen,
+        Algae,
+        OxyRock,
+        Dirt,
+        Creature
     }
 }

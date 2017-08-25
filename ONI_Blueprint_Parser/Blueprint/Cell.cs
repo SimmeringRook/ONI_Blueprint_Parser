@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ONI_Blueprint_Parser.Blueprint
+﻿namespace ONI_Blueprint_Parser.Blueprint
 {
     internal class Cell
     {
@@ -21,19 +15,19 @@ namespace ONI_Blueprint_Parser.Blueprint
         /// <summary>
         /// The element
         /// </summary>
-        internal Elements Element;
+        internal Element? Element;
 
         /// <summary>
         /// Mass of Element in kg(?)
         /// </summary>
-        internal int Mass;
+        internal double Mass;
 
         /// <summary>
         /// Temperature of Element in Kelvin
         /// </summary>
-        internal int Temperature;
+        internal double Temperature;
 
-        internal Cell(int x, int y, Elements element, int mass = 0, int temperature = 295)
+        internal Cell(Element element, int x=0, int y=0, double mass = 0.0, double temperature = 295)
         {
             Location_X = x;
             Location_Y = y;
@@ -41,5 +35,11 @@ namespace ONI_Blueprint_Parser.Blueprint
             Mass = mass;
             Temperature = temperature;
         }
+
+        public Cell()
+        {
+
+        }
+
     }
 }
