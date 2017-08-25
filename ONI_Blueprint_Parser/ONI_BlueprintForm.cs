@@ -98,6 +98,35 @@ namespace ONI_Blueprint_Parser
             
             drawingPanel.Controls.Add(blueprintCanvas);
 
+            foreach (Building building in blueprint.Buildings)
+            {
+                Panel canvasBlock = new Panel();
+                canvasBlock.Size = new System.Drawing.Size(25, 25);
+
+                toolTip1.SetToolTip(canvasBlock, string.Format("{0} [{1},{2}]", building.ID.ToString(), building.Location_X, building.Location_Y));
+                //canvasBlock.Dock = DockStyle.Fill;
+
+                switch (building.ID)
+                {
+                    case Blueprint.EntityID.Tile:
+                        canvasBlock.BackColor = regularTile;
+                        break;
+                    case Blueprint.EntityID.Headquarters:
+                        canvasBlock.BackColor = headquarters;
+                        break;
+                    case Blueprint.EntityID.RationBox:
+                        canvasBlock.BackColor = System.Drawing.Color.BlanchedAlmond;
+                        break;
+                    default:
+                        canvasBlock.BackColor = System.Drawing.Color.DarkGray;
+                        break;
+                }
+
+                blueprintCanvas.Controls.Add(canvasBlock,
+                    building.Location_X + blueprint.X_NormalizeFactor,
+                    building.Location_Y + blueprint.Y_NormalizeFactor);
+            }
+
             //blueprint.Cells.Reverse();
             foreach (Cell cell in blueprint.Cells)
             {
@@ -152,34 +181,9 @@ namespace ONI_Blueprint_Parser
                     cell.Location_Y + blueprint.Y_NormalizeFactor);
             }
 
-            //foreach (Building building in blueprint.Buildings)
-            //{
-            //    Panel canvasBlock = new Panel();
-            //    canvasBlock.Size = new System.Drawing.Size(25, 25);
-            //    //canvasBlock.Dock = DockStyle.Fill;
-                
-            //    switch (building.ID)
-            //    {
-            //        case Blueprint.EntityID.Tile:
-            //            canvasBlock.BackColor = regularTile;
-            //            break;
-            //        case Blueprint.EntityID.Headquarters:
-            //            canvasBlock.BackColor = headquarters;
-            //            break;
-            //        case Blueprint.EntityID.RationBox:
-            //            canvasBlock.BackColor = System.Drawing.Color.BlanchedAlmond;
-            //            break;
-            //        default:
-            //            canvasBlock.BackColor = System.Drawing.Color.DarkGray;
-            //            break;
-            //    }
 
-            //    blueprintCanvas.Controls.Add(canvasBlock, 
-            //        building.Location_X + blueprint.X_NormalizeFactor, 
-            //        building.Location_Y + blueprint.Y_NormalizeFactor);
-            //}
 
-            
+
             //blueprintCanvas.Dock = DockStyle.Fill;
             drawingPanel.Refresh();
         }
