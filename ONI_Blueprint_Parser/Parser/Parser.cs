@@ -105,6 +105,20 @@ namespace ONI_Blueprint_Parser.Parser
                 bluePrint.Cells = ParseCellData(unparsedCellData);
                 bluePrint.Buildings = ParseBuildingData(unparsedBuildingData, bluePrint.Cells);
 
+                int minimumX = 0;
+                int minimumY = 0;
+
+                foreach (Cell cell in bluePrint.Cells)
+                {
+                    if (cell.Location_X < minimumX)
+                        minimumX = cell.Location_X;
+                    if (cell.Location_Y < minimumY)
+                        minimumY = cell.Location_Y;
+                }
+
+                bluePrint.X_NormalizeFactor = Math.Abs(minimumX);
+                bluePrint.Y_NormalizeFactor = Math.Abs(minimumY);
+
                 return true;
             }
             else

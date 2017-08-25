@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newBlueprintToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recentlyLoadedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drawingPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,11 +71,28 @@
             this.recentlyLoadedToolStripMenuItem.Size = new System.Drawing.Size(289, 38);
             this.recentlyLoadedToolStripMenuItem.Text = "Recently Loaded";
             // 
+            // drawingPanel
+            // 
+            this.drawingPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.drawingPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.drawingPanel.Location = new System.Drawing.Point(12, 43);
+            this.drawingPanel.Name = "drawingPanel";
+            this.drawingPanel.Size = new System.Drawing.Size(842, 598);
+            this.drawingPanel.TabIndex = 1;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipTitle = "Hi";
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // ONI_BlueprintForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(866, 653);
+            this.Controls.Add(this.drawingPanel);
             this.Controls.Add(this.menuStrip1);
             this.Name = "ONI_BlueprintForm";
             this.Text = "ONI Blueprint Previewer";
@@ -89,6 +109,8 @@
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newBlueprintToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recentlyLoadedToolStripMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel drawingPanel;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

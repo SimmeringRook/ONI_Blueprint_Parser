@@ -1,4 +1,5 @@
 ﻿using ONI_Blueprint_Parser.Blueprint.Buildings;
+using System;
 using System.Collections.Generic;
 
 namespace ONI_Blueprint_Parser.Blueprint
@@ -9,6 +10,10 @@ namespace ONI_Blueprint_Parser.Blueprint
 
         public int Size_X;
         public int Size_Y;
+
+        public int X_NormalizeFactor;
+        public int Y_NormalizeFactor;
+
 
         public List<Cell> Cells;
 
