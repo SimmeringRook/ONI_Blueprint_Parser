@@ -1,5 +1,5 @@
-﻿using ONI_Blueprint_Parser.Blueprint;
-using ONI_Blueprint_Parser.Blueprint.Buildings;
+﻿using BlueprintResources;
+using BlueprintResources.Buildings;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,7 +21,7 @@ namespace ONI_Blueprint_Parser.Parser
         /// </summary>
         /// <param name="blueprint"></param>
         /// <returns></returns>
-        public bool GetBlueprint(out Blueprint.Blueprint blueprint)
+        public bool GetBlueprint(out Blueprint blueprint)
         {
             //Check the path
             if (BlueprintPath.Equals(string.Empty))
@@ -36,7 +36,7 @@ namespace ONI_Blueprint_Parser.Parser
             }
 
             //Begin Parse attempt
-            Blueprint.Blueprint blueprintAttempt;
+            Blueprint blueprintAttempt;
             if (TryReadBlueprint(out blueprintAttempt))
             {
                 blueprint = blueprintAttempt;
@@ -55,7 +55,7 @@ namespace ONI_Blueprint_Parser.Parser
         /// </summary>
         /// <param name="bluePrint"></param>
         /// <returns></returns>
-        private bool TryReadBlueprint(out Blueprint.Blueprint bluePrint)
+        private bool TryReadBlueprint(out Blueprint bluePrint)
         {
             //Read in raw data
             List<string> unparsedBlueprintHeader = new List<string>();
@@ -134,7 +134,7 @@ namespace ONI_Blueprint_Parser.Parser
         /// </summary>
         /// <param name="unparsedBlueprintHeader"></param>
         /// <returns></returns>
-        private Blueprint.Blueprint ParseBlueprintHeader(List<string> unparsedBlueprintHeader)
+        private Blueprint ParseBlueprintHeader(List<string> unparsedBlueprintHeader)
         {
             int index = 0;
             string name = RemoveExcess(unparsedBlueprintHeader[index]);
@@ -156,7 +156,7 @@ namespace ONI_Blueprint_Parser.Parser
             /* Unused */
             int area = int.Parse(RemoveExcess(unparsedBlueprintHeader[index]));
 
-            return new Blueprint.Blueprint(name, size_X, size_Y, BlueprintPath);
+            return new Blueprint(name, size_X, size_Y, BlueprintPath);
         }
 
         /// <summary>

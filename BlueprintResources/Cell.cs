@@ -1,33 +1,33 @@
-﻿namespace ONI_Blueprint_Parser.Blueprint
+﻿namespace BlueprintResources
 {
-    internal class Cell
+    public class Cell
     {
         /// <summary>
         /// X coordinate of the Cell in the Blueprint
         /// </summary>
-        internal int Location_X;
+        public int Location_X;
 
         /// <summary>
         /// Y coordinate of the Cell in the Blueprint
         /// </summary>
-        internal int Location_Y;
+        public int Location_Y;
 
         /// <summary>
         /// The element
         /// </summary>
-        internal Element? Element;
+        public Element? Element;
 
         /// <summary>
         /// Mass of Element in kg(?)
         /// </summary>
-        internal double Mass;
+        public double Mass;
 
         /// <summary>
         /// Temperature of Element in Kelvin
         /// </summary>
-        internal double Temperature;
+        public double Temperature;
 
-        internal Cell(Element element, int x=0, int y=0, double mass = 0.0, double temperature = 295)
+        public Cell(Element element, int x=0, int y=0, double mass = 0.0, double temperature = 295)
         {
             Location_X = x;
             Location_Y = y;

@@ -1,10 +1,9 @@
-﻿using ONI_Blueprint_Parser.Blueprint.Buildings;
-using System;
+﻿using BlueprintResources.Buildings;
 using System.Collections.Generic;
 
-namespace ONI_Blueprint_Parser.Blueprint
+namespace BlueprintResources
 {
-    internal class Blueprint
+    public class Blueprint
     {
         public string Name;
 
@@ -21,7 +20,7 @@ namespace ONI_Blueprint_Parser.Blueprint
 
         public string FileLocation;
 
-        internal Blueprint(string name, int x, int y, string fileLocation)
+        public Blueprint(string name, int x, int y, string fileLocation)
         {
             Name = name;
             Size_X = x;

@@ -1,6 +1,6 @@
-﻿namespace ONI_Blueprint_Parser.Blueprint
+﻿namespace BlueprintResources
 {
-    enum EntityID
+    public enum EntityID
     {
         Tile,
         Headquarters,
