@@ -53,7 +53,7 @@ namespace ONI_Blueprint_Parser.Painting
 
             //Set the number of rows to the height of the blueprint
             blueprintCanvas.RowCount = blueprintToPaint.Size_Y;
-            for (int y = 0; y <= blueprintCanvas.RowCount; y++)
+            for (int y = 0; y < blueprintCanvas.RowCount; y++)
                 blueprintCanvas.RowStyles.Add(new RowStyle(SizeType.Absolute, 50));
 
             return blueprintCanvas;
@@ -71,6 +71,7 @@ namespace ONI_Blueprint_Parser.Painting
             {
                 //Set up a new canvasBlock
                 PictureBox canvasBlock = CreateNewCanvasBlock(cell.Element.Value);
+                canvasBlock.Tag = string.Format("{0} [{1},{2}]", cell.Element.Value.ToString(), cell.Location_X, cell.Location_Y);
                 //Set up mouse-over information
                 iconToolTip.SetToolTip(canvasBlock, string.Format("{0} [{1},{2}]", cell.Element.Value.ToString(), cell.Location_X, cell.Location_Y));
 
@@ -78,6 +79,7 @@ namespace ONI_Blueprint_Parser.Painting
                 int canvasColumn = GetCanvasBlock_Column(cell.Location_X, blueprintToPaint.X_NormalizeFactor);
                 int canvasRow = GetCanvasBlock_Row(cell.Location_Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y);
 
+                
                 //Assign the canvasBlock to the canvas
                 blueprintCanvas.Controls.Add(canvasBlock, canvasColumn, canvasRow);
             }
@@ -131,6 +133,12 @@ namespace ONI_Blueprint_Parser.Painting
                 case Element.SedimentaryRock:
                     canvasBlock.BackColor = System.Drawing.Color.BurlyWood;
                     break;
+                case Element.Cuprite:
+                    canvasBlock.BackColor = System.Drawing.Color.Crimson;
+                    break;
+                case Element.Wolframite:
+                    canvasBlock.BackColor = System.Drawing.Color.DarkGray;
+                    break;
                 default:
                     break;
             }
@@ -163,7 +171,17 @@ namespace ONI_Blueprint_Parser.Painting
                             //Attempt to locate the building's asset and display it.
                             try
                             {
-                                canvasBlock.Image = BuildingAssetManager.GetImage(building.ID.Value);
+                                switch (building.ID.Value)
+                                {
+                                    case EntityID.Headquarters:
+                                    case EntityID.RationBox:
+                                    case EntityID.Tile:
+                                        canvasBlock.Image = BuildingAssetManager.GetImage(building.ID.Value);
+                                        break;
+                                    default:
+                                        break;
+                                }
+
                             }
                             catch (Exception e)
                             {
@@ -198,7 +216,7 @@ namespace ONI_Blueprint_Parser.Painting
         /// <returns></returns>
         private static int GetCanvasBlock_Row(int locationY, int Y_NormalizeFactor, int maxY)
         {
-            return maxY - (locationY + Y_NormalizeFactor);
+            return (maxY - 1) - (locationY + Y_NormalizeFactor);
         }
 
         

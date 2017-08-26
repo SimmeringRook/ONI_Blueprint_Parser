@@ -179,7 +179,11 @@ namespace ONI_Blueprint_Parser.Parser
                     case "element":
                         if (tempCell.Element.HasValue)
                         {
-                            parsedCells.Add(tempCell); //assume complete object, add and create new holder
+
+                            if (parsedCells.Where(c =>
+                            c.Location_X == tempCell.Location_X &&
+                            c.Location_Y == tempCell.Location_Y).FirstOrDefault() == null)
+                                parsedCells.Add(tempCell); //assume complete object, add and create new holder
                             tempCell = new Cell();
                         }
 
@@ -237,8 +241,11 @@ namespace ONI_Blueprint_Parser.Parser
                     case "location_y":
                         tempBuilding.Location_Y = int.Parse(data[1]);
                         break;
-
                     case "storage":
+                    case "rottable":
+                    case "amounts":
+                        break;
+                    case "other_values":
                         if (tempBuilding.ID.HasValue)
                         {
 
