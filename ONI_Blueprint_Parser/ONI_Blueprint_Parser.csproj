@@ -52,6 +52,9 @@
     <Compile Include="ONI_BlueprintForm.Designer.cs">
       <DependentUpon>ONI_BlueprintForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Painting\BitmapPainter.cs" />
+    <Compile Include="Painting\BuildingPainter.cs" />
+    <Compile Include="Painting\ElectricalPainter.cs" />
     <Compile Include="Painting\Painter.cs" />
     <Compile Include="Parser\Parser.cs" />
     <Compile Include="Program.cs" />

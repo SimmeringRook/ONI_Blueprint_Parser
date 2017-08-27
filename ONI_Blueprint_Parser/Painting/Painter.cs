@@ -7,8 +7,8 @@ namespace ONI_Blueprint_Parser.Painting
 {
     class Painter
     {
-        private Blueprint blueprintToPaint;
-        private ToolTip iconToolTip;
+        protected Blueprint blueprintToPaint;
+        protected ToolTip iconToolTip;
         public Painter(Blueprint blueprintToPaint, ToolTip iconToolTip)
         {
             this.blueprintToPaint = blueprintToPaint;
@@ -40,7 +40,7 @@ namespace ONI_Blueprint_Parser.Painting
         /// Builds a new empty template of blueprintCanvas
         /// </summary>
         /// <returns></returns>
-        private TableLayoutPanel BuildNewCanvas()
+        protected TableLayoutPanel BuildNewCanvas()
         {
             TableLayoutPanel blueprintCanvas = new TableLayoutPanel();
             blueprintCanvas.AutoSize = true;
@@ -59,13 +59,13 @@ namespace ONI_Blueprint_Parser.Painting
             return blueprintCanvas;
         }
 
-        
+
 
         /// <summary>
         /// Paints each canvasBlock in the blueprintCanvas according to the <see cref="Cell"/>'s <seealso cref="Element"/>.
         /// </summary>
         /// <param name="blueprintCanvas"></param>
-        private void AddCellsToCanvas(TableLayoutPanel blueprintCanvas)
+        protected void AddCellsToCanvas(TableLayoutPanel blueprintCanvas)
         {
             foreach (Cell cell in blueprintToPaint.Cells)
             {
@@ -90,7 +90,7 @@ namespace ONI_Blueprint_Parser.Painting
         /// </summary>
         /// <param name="cellElement"></param>
         /// <returns></returns>
-        private PictureBox CreateNewCanvasBlock(Element cellElement)
+        protected PictureBox CreateNewCanvasBlock(Element cellElement)
         {
             PictureBox canvasBlock = new PictureBox();
             canvasBlock.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -105,7 +105,7 @@ namespace ONI_Blueprint_Parser.Painting
         /// </summary>
         /// <param name="elementInCell"></param>
         /// <param name="canvasBlock"></param>
-        private static void ColorCell(Element elementInCell, PictureBox canvasBlock)
+        protected void ColorCell(Element elementInCell, PictureBox canvasBlock)
         {
             switch (elementInCell)
             {
@@ -148,7 +148,7 @@ namespace ONI_Blueprint_Parser.Painting
         /// Attempts to load in the images for each building located inside the blueprint
         /// </summary>
         /// <param name="blueprintCanvas"></param>
-        private void AddBuildingsToCanvas(TableLayoutPanel blueprintCanvas)
+        protected void AddBuildingsToCanvas(TableLayoutPanel blueprintCanvas)
         {
             /* The size blueprintCanvas.Controls will always be >= blueprintToPaint.Buildings */
             foreach (Control c in blueprintCanvas.Controls)
@@ -200,7 +200,7 @@ namespace ONI_Blueprint_Parser.Painting
         /// <param name="locationX"></param>
         /// <param name="X_NormalizeFactor"></param>
         /// <returns></returns>
-        private static int GetCanvasBlock_Column(int locationX, int X_NormalizeFactor)
+        protected static int GetCanvasBlock_Column(int locationX, int X_NormalizeFactor)
         {
             return locationX + X_NormalizeFactor;
         }
@@ -214,7 +214,7 @@ namespace ONI_Blueprint_Parser.Painting
         /// <param name="locationY"></param>
         /// <param name="Y_NormalizeFactor"></param>
         /// <returns></returns>
-        private static int GetCanvasBlock_Row(int locationY, int Y_NormalizeFactor, int maxY)
+        protected static int GetCanvasBlock_Row(int locationY, int Y_NormalizeFactor, int maxY)
         {
             return (maxY - 1) - (locationY + Y_NormalizeFactor);
         }

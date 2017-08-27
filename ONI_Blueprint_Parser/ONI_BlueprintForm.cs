@@ -54,10 +54,25 @@ namespace ONI_Blueprint_Parser
 
         private void LoadBlueprint(Blueprint blueprint)
         {
-            drawingPanel.Controls.Clear();
-            Painter buildingPainter = new Painter(blueprint, iconToolTip);
-            drawingPanel.Controls.Add(buildingPainter.Paint());
-            drawingPanel.Refresh();
+            buildingTabPage.Controls.Clear();
+            BitmapPainter blueprintPainter = new BuildingPainter(blueprint, iconToolTip);
+            System.Drawing.Image paintedBlueprint = ((blueprintPainter as BuildingPainter).Paint());
+            buildingTabPage.Controls.Add(new PictureBox()
+                {
+                    Image = paintedBlueprint,
+                    Size = paintedBlueprint.Size,
+                    BackColor = System.Drawing.Color.DarkGray
+                });
+
+            electricTabPage.Controls.Clear();
+            blueprintPainter = new ElectricalPainter(blueprint, iconToolTip);
+            paintedBlueprint = (blueprintPainter as ElectricalPainter).Paint();
+            electricTabPage.Controls.Add(
+                new PictureBox() {
+                    Image = paintedBlueprint,
+                    Size = paintedBlueprint.Size,
+                    BackColor = System.Drawing.Color.DarkGray
+                });
         }
 
         private void UpdateRecentlyOpened()
@@ -77,112 +92,6 @@ namespace ONI_Blueprint_Parser
             }
         }
         #endregion
-
-        //#region Drawing Blueprints
-        //System.Drawing.Color regularTile = System.Drawing.Color.Beige;
-        //System.Drawing.Color headquarters = System.Drawing.Color.Red;
-        //private void DrawBlueprint(Blueprint blueprint)
-        //{
-        //    drawingPanel.Controls.Clear();
-
-        //    TableLayoutPanel blueprintCanvas = new TableLayoutPanel();
-        //    blueprintCanvas.AutoSize = true;
-        //    blueprintCanvas.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
-
-        //    blueprintCanvas.ColumnCount = blueprint.Size_X;
-        //    for (int x = 0; x <= blueprintCanvas.ColumnCount; x++)
-        //        blueprintCanvas.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 25));
-            
-        //    blueprintCanvas.RowCount = blueprint.Size_Y;
-        //    for(int y = 0; y <= blueprintCanvas.RowCount; y++)
-        //        blueprintCanvas.RowStyles.Add(new RowStyle(SizeType.Absolute, 25));
-            
-        //    drawingPanel.Controls.Add(blueprintCanvas);
-
-        //    foreach (Building building in blueprint.Buildings)
-        //    {
-        //        Panel canvasBlock = new Panel();
-        //        canvasBlock.Size = new System.Drawing.Size(25, 25);
-
-        //        iconToolTip.SetToolTip(canvasBlock, string.Format("{0} [{1},{2}]", building.ID.ToString(), building.Location_X, building.Location_Y));
-        //        //canvasBlock.Dock = DockStyle.Fill;
-
-        //        switch (building.ID)
-        //        {
-        //            case EntityID.Tile:
-        //                canvasBlock.BackColor = regularTile;
-        //                break;
-        //            case EntityID.Headquarters:
-        //                canvasBlock.BackColor = headquarters;
-        //                break;
-        //            case EntityID.RationBox:
-        //                canvasBlock.BackColor = System.Drawing.Color.BlanchedAlmond;
-        //                break;
-        //            default:
-        //                canvasBlock.BackColor = System.Drawing.Color.DarkGray;
-        //                break;
-        //        }
-
-        //        blueprintCanvas.Controls.Add(canvasBlock,
-        //            building.Location_X + blueprint.X_NormalizeFactor,
-        //            building.Location_Y + blueprint.Y_NormalizeFactor);
-        //    }
-
-        //    //blueprint.Cells.Reverse();
-        //    foreach (Cell cell in blueprint.Cells)
-        //    {
-        //        Panel canvasBlock = new Panel();
-        //        canvasBlock.Size = new System.Drawing.Size(25, 25);
-        //        iconToolTip.SetToolTip(canvasBlock, string.Format("{0} [{1},{2}]", cell.Element.ToString(), cell.Location_X, cell.Location_Y));
-        //        switch (cell.Element)
-        //        {
-        //            case Element.Algae:
-        //                canvasBlock.BackColor = System.Drawing.Color.SeaGreen;
-        //                break;
-        //            case Element.Dirt:
-        //                canvasBlock.BackColor = System.Drawing.Color.RosyBrown;
-        //                break;
-        //            case Element.Obsidian:
-        //                canvasBlock.BackColor = System.Drawing.Color.Black;
-        //                break;
-        //            case Element.OxyRock:
-        //                canvasBlock.BackColor = System.Drawing.Color.Aquamarine;
-        //                break;
-        //            case Element.SandStone:
-        //                canvasBlock.BackColor = System.Drawing.Color.SandyBrown;
-        //                break;
-        //            case Element.IronOre:
-        //                canvasBlock.BackColor = System.Drawing.Color.IndianRed;
-        //                break;
-        //            case Element.Oxygen:
-        //                canvasBlock.BackColor = System.Drawing.Color.Cyan;
-        //                break;
-        //            case Element.SedimentaryRock:
-        //                canvasBlock.BackColor = System.Drawing.Color.BurlyWood;
-        //                break;
-        //            default:
-        //                break;
-        //        }
-
-        //        bool spaceIsTaken = false;
-
-        //        foreach (Control c in blueprintCanvas.Controls)
-        //        {
-        //            if (blueprintCanvas.GetColumn(c) == cell.Location_X + blueprint.X_NormalizeFactor &&
-        //                blueprintCanvas.GetRow(c) == cell.Location_Y + blueprint.Y_NormalizeFactor)
-        //                spaceIsTaken = true;
-        //        }
-
-        //        if (spaceIsTaken == false)
-        //        blueprintCanvas.Controls.Add(canvasBlock,
-        //            cell.Location_X + blueprint.X_NormalizeFactor,
-        //            cell.Location_Y + blueprint.Y_NormalizeFactor);
-        //    }
-
-        //    drawingPanel.Refresh();
-        //}
-
-        //#endregion
 
     }
 }

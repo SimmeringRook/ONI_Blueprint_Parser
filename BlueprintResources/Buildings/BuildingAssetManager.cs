@@ -9,15 +9,6 @@ namespace BlueprintResources.Buildings
     /// </summary>
     public static class BuildingAssetManager
     {
-
-        //private static string executableLocation = (new System.Uri(System.Reflection.Assembly.GetEntryAssembly().CodeBase)).AbsolutePath;
-        //private static string exeDir = System.IO.Path.GetDirectoryName(executableLocation);
-        //private static string resourceDirectory = System.IO.Path.Combine(exeDir, "..\\..\\BlueprintResources\\Buildings\\Assets\\");
-
-        //string file = string.Concat(Properties.Resources., buildingName, ".png");
-        //return Image.FromFile(file);
-
-
         /// <summary>
         /// Returns the corresponding .png for the building as an <see cref="Image"/>
         /// </summary>
@@ -28,11 +19,11 @@ namespace BlueprintResources.Buildings
             switch (buildingName)
             {
                 case EntityID.Tile:
-                    return Properties.Resources.Tile;
+                    return Properties.Resources.Tile_Outline;
                 case EntityID.RationBox:
-                    return Properties.Resources.RationBox;
+                    return Properties.Resources.RationBox_Outline;
                 case EntityID.Headquarters:
-                    return Properties.Resources.Headquarters;
+                    return Properties.Resources.Headquarters_Outline;
                 default:
                     throw new System.Exception("Could not find the image for: " + buildingName.ToString());
             }

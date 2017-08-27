@@ -36,13 +36,11 @@
             this.iconToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.blueprintTabControl = new System.Windows.Forms.TabControl();
             this.buildingTabPage = new System.Windows.Forms.TabPage();
-            this.drawingPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.electricTabPage = new System.Windows.Forms.TabPage();
             this.liquidTabPage = new System.Windows.Forms.TabPage();
             this.gasTabPage = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.blueprintTabControl.SuspendLayout();
-            this.buildingTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,7 +91,6 @@
             // 
             // buildingTabPage
             // 
-            this.buildingTabPage.Controls.Add(this.drawingPanel);
             this.buildingTabPage.Location = new System.Drawing.Point(8, 39);
             this.buildingTabPage.Name = "buildingTabPage";
             this.buildingTabPage.Padding = new System.Windows.Forms.Padding(3);
@@ -102,22 +99,12 @@
             this.buildingTabPage.Text = "Buildings";
             this.buildingTabPage.UseVisualStyleBackColor = true;
             // 
-            // drawingPanel
-            // 
-            this.drawingPanel.AutoScroll = true;
-            this.drawingPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.drawingPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.drawingPanel.Location = new System.Drawing.Point(3, 3);
-            this.drawingPanel.Name = "drawingPanel";
-            this.drawingPanel.Size = new System.Drawing.Size(1568, 1023);
-            this.drawingPanel.TabIndex = 2;
-            // 
             // electricTabPage
             // 
             this.electricTabPage.Location = new System.Drawing.Point(8, 39);
             this.electricTabPage.Name = "electricTabPage";
             this.electricTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.electricTabPage.Size = new System.Drawing.Size(850, 566);
+            this.electricTabPage.Size = new System.Drawing.Size(1574, 1029);
             this.electricTabPage.TabIndex = 1;
             this.electricTabPage.Text = "Electrical";
             this.electricTabPage.UseVisualStyleBackColor = true;
@@ -126,7 +113,7 @@
             // 
             this.liquidTabPage.Location = new System.Drawing.Point(8, 39);
             this.liquidTabPage.Name = "liquidTabPage";
-            this.liquidTabPage.Size = new System.Drawing.Size(850, 566);
+            this.liquidTabPage.Size = new System.Drawing.Size(1574, 1029);
             this.liquidTabPage.TabIndex = 2;
             this.liquidTabPage.Text = "Liquid";
             this.liquidTabPage.UseVisualStyleBackColor = true;
@@ -152,7 +139,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.blueprintTabControl.ResumeLayout(false);
-            this.buildingTabPage.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,7 +153,6 @@
         private System.Windows.Forms.ToolTip iconToolTip;
         private System.Windows.Forms.TabControl blueprintTabControl;
         private System.Windows.Forms.TabPage buildingTabPage;
-        private System.Windows.Forms.FlowLayoutPanel drawingPanel;
         private System.Windows.Forms.TabPage electricTabPage;
         private System.Windows.Forms.TabPage liquidTabPage;
         private System.Windows.Forms.TabPage gasTabPage;

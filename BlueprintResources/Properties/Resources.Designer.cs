@@ -63,9 +63,9 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Headquarters {
+        internal static System.Drawing.Bitmap Headquarters_Outline {
             get {
-                object obj = ResourceManager.GetObject("Headquarters", resourceCulture);
+                object obj = ResourceManager.GetObject("Headquarters_Outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RationBox {
+        internal static System.Drawing.Bitmap RationBox_Outline {
             get {
-                object obj = ResourceManager.GetObject("RationBox", resourceCulture);
+                object obj = ResourceManager.GetObject("RationBox_Outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tile {
+        internal static System.Drawing.Bitmap Tile_Outline {
             get {
-                object obj = ResourceManager.GetObject("Tile", resourceCulture);
+                object obj = ResourceManager.GetObject("Tile_Outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

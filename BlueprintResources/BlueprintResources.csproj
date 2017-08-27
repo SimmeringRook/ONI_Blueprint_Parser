@@ -56,16 +56,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Buildings\Assets\airconditioner_0.png" />
-    <None Include="Resources\Headquarters.png" />
-    <None Include="Resources\RationBox.png" />
-    <None Include="Resources\Tile.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Headquarters_Outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RationBox_Outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tile_Outline.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
