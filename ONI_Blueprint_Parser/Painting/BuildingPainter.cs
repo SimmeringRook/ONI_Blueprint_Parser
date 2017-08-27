@@ -17,6 +17,7 @@ namespace ONI_Blueprint_Parser.Painting
         {
             Image blueprintBase = base.Paint();
             Graphics blueprintCanvas = Graphics.FromImage(blueprintBase);
+            blueprintCanvas.Clear(Color.Transparent);
 
             foreach (Building building in blueprintToPaint.Buildings)
             {
@@ -27,18 +28,17 @@ namespace ONI_Blueprint_Parser.Painting
                 {
                     if (building.ID.Value == EntityID.Headquarters || building.ID.Value == EntityID.RationBox || building.ID.Value == EntityID.Tile)
                     {
-                        Image buildingAsset = BuildingAssetManager.GetImage(building.ID.Value);
+                        Image buildingAsset = BuildingAssetManager.GetImage(building);
                         switch (building.ID.Value)
                         {
                             case EntityID.Headquarters:
-                                blueprintCanvas.DrawImage(TintAsset(buildingAsset, building.Element.Value), loc_X, loc_Y, tileWidth * 4, tileHeight * 4);
+                                blueprintCanvas.DrawImage(buildingAsset, loc_X, loc_Y, tileWidth * 4, tileHeight * 4);
                                 break;
                             case EntityID.RationBox:
-                                blueprintCanvas.DrawImage(TintAsset(buildingAsset, building.Element.Value), loc_X, loc_Y, tileWidth * 2, tileHeight);
+                                blueprintCanvas.DrawImage(buildingAsset, loc_X, loc_Y, tileWidth * 2, tileHeight);
                                 break;
                             case EntityID.Tile:
-                                //Image buildingAsset = BuildingAssetManager.GetImage(building.ID.Value);
-                                blueprintCanvas.DrawImage(TintAsset(buildingAsset, building.Element.Value), loc_X, loc_Y, tileWidth, tileHeight);
+                                blueprintCanvas.DrawImage(buildingAsset, loc_X, loc_Y, tileWidth, tileHeight);
                                 break;
                             default:
                                 break;

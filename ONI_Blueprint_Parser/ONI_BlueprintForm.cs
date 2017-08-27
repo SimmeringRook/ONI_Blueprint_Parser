@@ -61,17 +61,17 @@ namespace ONI_Blueprint_Parser
                 {
                     Image = paintedBlueprint,
                     Size = paintedBlueprint.Size,
-                    BackColor = System.Drawing.Color.DarkGray
+                    BackColor = System.Drawing.Color.DimGray
                 });
 
             electricTabPage.Controls.Clear();
-            blueprintPainter = new ElectricalPainter(blueprint, iconToolTip);
+            blueprintPainter = new ElectricalPainter(blueprint, iconToolTip, paintedBlueprint);
             paintedBlueprint = (blueprintPainter as ElectricalPainter).Paint();
             electricTabPage.Controls.Add(
                 new PictureBox() {
                     Image = paintedBlueprint,
                     Size = paintedBlueprint.Size,
-                    BackColor = System.Drawing.Color.DarkGray
+                    BackColor = System.Drawing.Color.DimGray
                 });
         }
 

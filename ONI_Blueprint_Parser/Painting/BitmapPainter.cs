@@ -30,7 +30,7 @@ namespace ONI_Blueprint_Parser.Painting
         {
             Bitmap paintedBlueprint = new Bitmap(tileWidth * blueprintToPaint.Size_X, tileHeight * blueprintToPaint.Size_Y, PixelFormat.Format32bppArgb);
             Graphics blueprintCanvas = Graphics.FromImage(paintedBlueprint);
-
+            
             return paintedBlueprint;
         }
 
@@ -109,6 +109,19 @@ namespace ONI_Blueprint_Parser.Painting
         protected static int GetCanvasBlock_Row(int locationY, int Y_NormalizeFactor, int maxY)
         {
             return (maxY - 1) - (locationY + Y_NormalizeFactor);
+        }
+
+        protected Image ChangeOpacity(Image img, float opacityvalue)
+        {
+            Bitmap bmp = new Bitmap(img.Width, img.Height); // Determining Width and Height of Source Image
+            Graphics graphics = Graphics.FromImage(bmp);
+            ColorMatrix colormatrix = new ColorMatrix();
+            colormatrix.Matrix33 = opacityvalue;
+            ImageAttributes imgAttribute = new ImageAttributes();
+            imgAttribute.SetColorMatrix(colormatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
+            graphics.DrawImage(img, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, imgAttribute);
+            graphics.Dispose();   // Releasing all resource used by graphics 
+            return bmp;
         }
     }
 }

@@ -63,6 +63,16 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap electric_0 {
+            get {
+                object obj = ResourceManager.GetObject("electric_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Headquarters_Outline {
             get {
                 object obj = ResourceManager.GetObject("Headquarters_Outline", resourceCulture);

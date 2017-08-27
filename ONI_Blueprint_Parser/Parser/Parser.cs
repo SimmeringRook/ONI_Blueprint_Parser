@@ -221,9 +221,9 @@ namespace ONI_Blueprint_Parser.Parser
 
             Building tempBuilding = new Building();
 
-            foreach (string cellData in unparsedBuildingData)
+            foreach (string buildingData in unparsedBuildingData)
             {
-                string[] data = cellData.Split(':');
+                string[] data = buildingData.Split(':');
 
                 switch (data[0].TrimStart(new char[] { ' ', '-' }))
                 {
@@ -245,6 +245,9 @@ namespace ONI_Blueprint_Parser.Parser
                     case "rottable":
                     case "amounts":
                         break;
+                    case "connections":
+                        tempBuilding.Connection = (Connection)int.Parse(data[1]);
+                        break;
                     case "other_values":
                         if (tempBuilding.ID.HasValue)
                         {
@@ -254,7 +257,7 @@ namespace ONI_Blueprint_Parser.Parser
                             c.Location_Y == tempBuilding.Location_Y).FirstOrDefault();
                             if (associatedCell != null)
                             {
-                                tempBuilding = new Building(tempBuilding.ID.Value, associatedCell);
+                                tempBuilding = new Building(tempBuilding.ID.Value, tempBuilding.Connection, associatedCell);
                             }
 
                             parsedBuildings.Add(tempBuilding); //assume complete object, add and create new holder

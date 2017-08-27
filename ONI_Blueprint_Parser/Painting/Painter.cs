@@ -5,10 +5,16 @@ using System.Windows.Forms;
 
 namespace ONI_Blueprint_Parser.Painting
 {
+    [Obsolete]
     class Painter
     {
         protected Blueprint blueprintToPaint;
         protected ToolTip iconToolTip;
+        /// <summary>
+        /// !! - Deprecated - !!
+        /// </summary>
+        /// <param name="blueprintToPaint"></param>
+        /// <param name="iconToolTip"></param>
         public Painter(Blueprint blueprintToPaint, ToolTip iconToolTip)
         {
             this.blueprintToPaint = blueprintToPaint;
@@ -176,7 +182,7 @@ namespace ONI_Blueprint_Parser.Painting
                                     case EntityID.Headquarters:
                                     case EntityID.RationBox:
                                     case EntityID.Tile:
-                                        canvasBlock.Image = BuildingAssetManager.GetImage(building.ID.Value);
+                                        canvasBlock.Image = BuildingAssetManager.GetImage(building);
                                         break;
                                     default:
                                         break;
@@ -218,7 +224,5 @@ namespace ONI_Blueprint_Parser.Painting
         {
             return (maxY - 1) - (locationY + Y_NormalizeFactor);
         }
-
-        
     }
 }

@@ -14,9 +14,9 @@ namespace BlueprintResources.Buildings
         /// </summary>
         /// <param name="buildingName"></param>
         /// <returns></returns>
-        public static Image GetImage(EntityID buildingName)
+        public static Image GetImage(Building building)
         {
-            switch (buildingName)
+            switch (building.ID.Value)
             {
                 case EntityID.Tile:
                     return Properties.Resources.Tile_Outline;
@@ -24,8 +24,36 @@ namespace BlueprintResources.Buildings
                     return Properties.Resources.RationBox_Outline;
                 case EntityID.Headquarters:
                     return Properties.Resources.Headquarters_Outline;
+                case EntityID.Wire:
+                    return GetWire(building);
                 default:
-                    throw new System.Exception("Could not find the image for: " + buildingName.ToString());
+                    throw new System.Exception("Could not find the image for: " + building.ID.Value.ToString());
+            }
+        }
+
+        private static Image GetWire(Building wire)
+        {
+            switch (wire.Connection)
+            {
+                case Connection.W:
+                case Connection.E:
+                case Connection.EW:
+                case Connection.N:
+                case Connection.NW:
+                case Connection.NE:
+                case Connection.NEW:
+                case Connection.S:
+                case Connection.SW:
+                case Connection.ES:
+                case Connection.ESW:
+                case Connection.NS:
+                case Connection.NSW:
+                case Connection.NSE:
+                case Connection.NESW:
+                    
+                case Connection.None:
+                default:
+                    return Properties.Resources.electric_0;
             }
         }
     }
