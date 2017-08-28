@@ -40,8 +40,8 @@ namespace ONI_Blueprint_Parser.Painting
         protected List<Point> GetDrawPoints(Building conduit)
         {
             List<Point> drawPoints = new List<Point>();
-            int topLeftCorner_X = tileWidth * GetCanvasBlock_Column(conduit.Location_X, blueprintToPaint.X_NormalizeFactor);
-            int topLeftCorner_Y = tileHeight * GetCanvasBlock_Row(conduit.Location_Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y);
+            int topLeftCorner_X = tileWidth * GetCanvasBlock_Column(conduit.Location.X, blueprintToPaint.X_NormalizeFactor);
+            int topLeftCorner_Y = tileHeight * GetCanvasBlock_Row(conduit.Location.Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y);
 
             Point origin = new Point((topLeftCorner_X + (tileWidth / 2)), (topLeftCorner_Y + (tileHeight / 2)));
             drawPoints.Add(origin);
@@ -129,8 +129,8 @@ namespace ONI_Blueprint_Parser.Painting
         protected List<Point> GetBridgeDrawPoints(Building conduit)
         {
             List<Point> drawPoints = new List<Point>();
-            int topLeftCorner_X = tileWidth * GetCanvasBlock_Column(conduit.Location_X, blueprintToPaint.X_NormalizeFactor);
-            int topLeftCorner_Y = tileHeight * GetCanvasBlock_Row(conduit.Location_Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y);
+            int topLeftCorner_X = tileWidth * GetCanvasBlock_Column(conduit.Location.X, blueprintToPaint.X_NormalizeFactor);
+            int topLeftCorner_Y = tileHeight * GetCanvasBlock_Row(conduit.Location.Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y);
 
             Point arcOrigin = new Point(topLeftCorner_X, topLeftCorner_Y);
             drawPoints.Add(arcOrigin);

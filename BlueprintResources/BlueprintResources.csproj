@@ -43,8 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Blueprint.cs" />
+    <Compile Include="Buildings\BuidlingFactory.cs" />
     <Compile Include="Buildings\Building.cs" />
     <Compile Include="Buildings\BuildingAssetManager.cs" />
+    <Compile Include="Buildings\BuildingParamters.cs" />
     <Compile Include="Buildings\Connection.cs" />
     <Compile Include="Cell.cs" />
     <Compile Include="Element.cs" />
@@ -63,31 +65,52 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Headquarters_Outline.png" />
+    <None Include="Resources\Buildings\Base\Headquarters_Outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RationBox_Outline.png" />
+    <None Include="Resources\Buildings\Food\RationBox_Outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Tile_Outline.png" />
+    <None Include="Resources\Buildings\Base\Tile_Outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\electric_0.png" />
+    <None Include="Resources\Electrical\cable.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\electric_All.png" />
+    <None Include="Resources\Electrical\femaleending.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\electric_corner.png" />
+    <None Include="Resources\Electrical\ljunction.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\electric_Line.png" />
+    <None Include="Resources\Electrical\maleending.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\electric_T.png" />
+    <None Include="Resources\Electrical\noconnections.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\electric_Single.png" />
+    <None Include="Resources\Electrical\tjunction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electrical\xjunction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buildings\Food\rationBox_206.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buildings\Power\BatteryMedium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electrical\wire_Bridge_Outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electrical\wire_FemaleEnding_Outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electrical\wire_XJunction_Outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Electrical\wire_Bridge.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

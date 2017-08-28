@@ -25,20 +25,20 @@ namespace ONI_Blueprint_Parser.Painting
 
                 foreach (Building building in blueprintToPaint.Buildings)
                 {
-                    if (building.ID.Value == EntityID.LiquidConduit || 
-                        building.ID.Value == EntityID.InsulatedLiquidConduit)
+                    if (building.ID == EntityID.LiquidConduit || 
+                        building.ID == EntityID.InsulatedLiquidConduit)
                     {
                         List<Point> drawPoints = GetDrawPoints(building);
                         Point origin = drawPoints[0];
 
                         for (int i = 1; i < drawPoints.Count; i++)
                         {
-                            if (building.ID.Value == EntityID.InsulatedLiquidConduit)
+                            if (building.ID == EntityID.InsulatedLiquidConduit)
                                 blueprintCanvas.DrawLine(insulatedliquidPen, origin, drawPoints[i]);
                             blueprintCanvas.DrawLine(liquidPen, origin, drawPoints[i]);
                         }
                     }
-                    else if (building.ID.Value == EntityID.LiquidConduitBridge)
+                    else if (building.ID == EntityID.LiquidConduitBridge)
                     {
                         List<Point> drawPoints = GetBridgeDrawPoints(building);
                         Point arcOrigin = drawPoints[0];

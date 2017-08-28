@@ -1,6 +1,5 @@
 ﻿using BlueprintResources;
 using BlueprintResources.Buildings;
-using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -21,23 +20,25 @@ namespace ONI_Blueprint_Parser.Painting
 
             foreach (Building building in blueprintToPaint.Buildings)
             {
-                if (building.ID.Value == EntityID.Wire || building.ID.Value == EntityID.HighWattageWire)
+                if (building.ID == EntityID.Wire || building.ID == EntityID.HighWattageWire)
                 {
-                    int loc_X = tileWidth * GetCanvasBlock_Column(building.Location_X, blueprintToPaint.X_NormalizeFactor);
-                    int loc_Y = tileHeight * GetCanvasBlock_Row(building.Location_Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y);
+                    int loc_X = (tileWidth * GetCanvasBlock_Column(building.Location.X, blueprintToPaint.X_NormalizeFactor)) - (tileWidth * building.Offset.X);
+                    int loc_Y = (tileHeight * GetCanvasBlock_Row(building.Location.Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y)) - (tileHeight * building.Offset.Y);
 
-                    try
-                    {
-                        Image buildingAsset = BuildingAssetManager.GetImage(building);
-                        blueprintCanvas.DrawImage(buildingAsset, loc_X, loc_Y, tileWidth, tileHeight);
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show("Bitmap: " + e.Message);
-                    }
+
+                    blueprintCanvas.DrawImage(building.Sprite, loc_X, loc_Y, tileWidth * building.Size.Width, tileHeight * building.Size.Height);
                 }
+            }
 
-                
+            foreach (Building building in blueprintToPaint.Buildings)
+            {
+                if (building.ID == EntityID.WireBridge)
+                {
+                    int loc_X = (tileWidth * GetCanvasBlock_Column(building.Location.X, blueprintToPaint.X_NormalizeFactor)) - (tileWidth * building.Offset.X);
+                    int loc_Y = (tileHeight * GetCanvasBlock_Row(building.Location.Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y)) - (tileHeight * building.Offset.Y);
+
+                    blueprintCanvas.DrawImage(building.Sprite, loc_X, loc_Y, tileWidth * building.Size.Width, tileHeight * building.Size.Height);
+                }
             }
 
             return paintedBlueprint;

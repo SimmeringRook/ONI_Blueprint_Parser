@@ -39,7 +39,8 @@
 
         #endregion
         #region Misc
-        FieldRation
+        FieldRation,
+        None
 
         #endregion
     }

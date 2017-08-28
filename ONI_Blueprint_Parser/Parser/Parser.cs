@@ -219,7 +219,7 @@ namespace ONI_Blueprint_Parser.Parser
         {
             List<Building> parsedBuildings = new List<Building>();
 
-            Building tempBuilding = new Building();
+            BuildingParameters buildingInformation = CreateNewDataHolder();
 
             foreach (string buildingData in unparsedBuildingData)
             {
@@ -228,43 +228,37 @@ namespace ONI_Blueprint_Parser.Parser
                 switch (data[0].TrimStart(new char[] { ' ', '-' }))
                 {
                     case "id":
+                        if (data[1].TrimStart(new char[] {' '}).Equals("joulesAvailable"))
+                            break;
                         EntityID id = (EntityID)Enum.Parse(typeof(EntityID), data[1]);
                         if (id != EntityID.FieldRation)
-                            tempBuilding.ID = (EntityID)Enum.Parse(typeof(EntityID), data[1]);
+                            buildingInformation.ID = (EntityID)Enum.Parse(typeof(EntityID), data[1]);
                         break;
                     case "temperature":
-                        tempBuilding.Temperature = double.Parse(data[1]);
                         break;
                     case "location_x":
-                        tempBuilding.Location_X = int.Parse(data[1]);
+                        buildingInformation.Location.X = int.Parse(data[1]);
                         break;
                     case "location_y":
-                        tempBuilding.Location_Y = int.Parse(data[1]);
+                        buildingInformation.Location.Y = int.Parse(data[1]);
                         break;
                     case "rotationOrientation":
                         string rotation = data[1].Substring(2);
-                        tempBuilding.Rotation = int.Parse(rotation);
+                        buildingInformation.Rotation = int.Parse(rotation);
                         break;
                     case "storage":
                     case "rottable":
                     case "amounts":
                         break;
                     case "connections":
-                        tempBuilding.Connection = (Connection)int.Parse(data[1]);
+                        buildingInformation.Connection = (Connection)int.Parse(data[1]);
                         break;
                     case "other_values":
-                        if (tempBuilding.ID.HasValue)
+                        if (buildingInformation.ID != EntityID.None)
                         {
-                            Cell associatedCell = Cells.Where(c =>
-                            c.Location_X == tempBuilding.Location_X &&
-                            c.Location_Y == tempBuilding.Location_Y).FirstOrDefault();
-                            if (associatedCell != null)
-                            {
-                                tempBuilding = new Building(tempBuilding.ID.Value, tempBuilding.Connection, associatedCell, tempBuilding.Rotation);
-                            }
-
-                            parsedBuildings.Add(tempBuilding); //assume complete object, add and create new holder
-                            tempBuilding = new Building();
+                            //assume complete object, add and create new holder
+                            parsedBuildings.Add(BuildingFactory.CreateNew(buildingInformation));
+                            buildingInformation = CreateNewDataHolder();
                         }
                         break;
                     default:
@@ -273,6 +267,17 @@ namespace ONI_Blueprint_Parser.Parser
             }
 
             return parsedBuildings;
+        }
+
+        private BuildingParameters CreateNewDataHolder()
+        {
+            return new BuildingParameters()
+            {
+                ID = EntityID.None,
+                Connection = Connection.None,
+                Location = new System.Drawing.Point(0, 0),
+                Rotation = 0
+            };
         }
 
         private string RemoveExcess(string dataLine)

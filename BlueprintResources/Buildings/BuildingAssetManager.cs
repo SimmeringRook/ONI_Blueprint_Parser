@@ -7,7 +7,7 @@ namespace BlueprintResources.Buildings
     /// Searches by Oxygen Not Included <seealso cref="EntityID"/> to return the .png of the requested building.
     /// Use <see cref="GetImage(EntityID)"/> for a <see cref="Image"/>
     /// </summary>
-    public static class BuildingAssetManager
+    internal static class BuildingAssetManager
     {
         /// <summary>
         /// Returns the corresponding .png for the building as an <see cref="Image"/>
@@ -16,19 +16,23 @@ namespace BlueprintResources.Buildings
         /// <returns></returns>
         public static Image GetImage(Building building)
         {
-            switch (building.ID.Value)
+            switch (building.ID)
             {
                 case EntityID.Tile:
                     return Properties.Resources.Tile_Outline;
                 case EntityID.RationBox:
-                    return Properties.Resources.RationBox_Outline;
+                    return Properties.Resources.rationBox_206;
                 case EntityID.Headquarters:
                     return Properties.Resources.Headquarters_Outline;
                 case EntityID.Wire:
                 case EntityID.HighWattageWire:
                     return GetWire(building);
+                case EntityID.BatteryMedium:
+                    return Properties.Resources.BatteryMedium;
+                case EntityID.WireBridge:
+                    return Properties.Resources.wire_Bridge;
                 default:
-                    throw new System.Exception("Could not find the image for: " + building.ID.Value.ToString());
+                    throw new System.Exception("Could not find the image for: " + building.ID.ToString());
             }
         }
 
@@ -38,58 +42,58 @@ namespace BlueprintResources.Buildings
             switch (wire.Connection)
             {
                 case Connection.W:
-                    return Properties.Resources.electric_Single;
+                    return Properties.Resources.maleending;
                 case Connection.E:
-                    rotatedImage = Properties.Resources.electric_Single;
+                    rotatedImage = Properties.Resources.maleending;
                     rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
                     return rotatedImage;
                 case Connection.EW:
-                    return Properties.Resources.electric_Line;
+                    return Properties.Resources.cable;
                 case Connection.N:
-                    rotatedImage = Properties.Resources.electric_Single;
+                    rotatedImage = Properties.Resources.maleending;
                     rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
                     return rotatedImage;
                 case Connection.NW:
-                    rotatedImage = Properties.Resources.electric_corner;
+                    rotatedImage = Properties.Resources.ljunction;
                     rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipX);
                     return rotatedImage;
                 case Connection.NE:
-                    rotatedImage = Properties.Resources.electric_corner;
+                    rotatedImage = Properties.Resources.ljunction;
                     rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
                     return rotatedImage;
                 case Connection.NEW:
-                    rotatedImage = Properties.Resources.electric_T;
+                    rotatedImage = Properties.Resources.tjunction;
                     rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
                     return rotatedImage;
                 case Connection.S:
-                    rotatedImage = Properties.Resources.electric_Single;
+                    rotatedImage = Properties.Resources.maleending;
                     rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipY);
                     return rotatedImage;
                 case Connection.SW:
-                    return Properties.Resources.electric_corner;
+                    return Properties.Resources.ljunction;
                 case Connection.ES:
-                    rotatedImage = Properties.Resources.electric_corner;
+                    rotatedImage = Properties.Resources.ljunction;
                     rotatedImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
                     return rotatedImage;
                 case Connection.ESW:
-                    return Properties.Resources.electric_T;
+                    return Properties.Resources.tjunction;
                 case Connection.NS:
-                    rotatedImage = Properties.Resources.electric_Line;
+                    rotatedImage = Properties.Resources.cable;
                     rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
                     return rotatedImage;
                 case Connection.NSW:
-                    rotatedImage = Properties.Resources.electric_T;
+                    rotatedImage = Properties.Resources.tjunction;
                     rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
                     return rotatedImage;
                 case Connection.NSE:
-                    rotatedImage = Properties.Resources.electric_T;
+                    rotatedImage = Properties.Resources.tjunction;
                     rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipX);
                     return rotatedImage;
                 case Connection.NESW:
-                    return Properties.Resources.electric_All;
+                    return Properties.Resources.xjunction;
                 case Connection.None:
                 default:
-                    return Properties.Resources.electric_0;
+                    return Properties.Resources.noconnections;
             }
         }
     }
