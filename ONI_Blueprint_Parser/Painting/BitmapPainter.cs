@@ -2,6 +2,8 @@
 using BlueprintResources;
 using System.Drawing;
 using System.Drawing.Imaging;
+using BlueprintResources.Buildings;
+using System.Collections.Generic;
 
 namespace ONI_Blueprint_Parser.Painting
 {
@@ -34,57 +36,133 @@ namespace ONI_Blueprint_Parser.Painting
             return paintedBlueprint;
         }
 
-        protected Image TintAsset(Image buildingAsset, Element element)
+
+        protected List<Point> GetDrawPoints(Building conduit)
         {
-            Bitmap tintedBackground = new Bitmap(tileWidth, tileHeight);
-            
-            for (int y = 0; y < tintedBackground.Height; y++)
+            List<Point> drawPoints = new List<Point>();
+            int topLeftCorner_X = tileWidth * GetCanvasBlock_Column(conduit.Location_X, blueprintToPaint.X_NormalizeFactor);
+            int topLeftCorner_Y = tileHeight * GetCanvasBlock_Row(conduit.Location_Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y);
+
+            Point origin = new Point((topLeftCorner_X + (tileWidth / 2)), (topLeftCorner_Y + (tileHeight / 2)));
+            drawPoints.Add(origin);
+
+            Point northConnection = new Point(origin.X, topLeftCorner_Y);
+            Point southConnection = new Point(origin.X, topLeftCorner_Y + tileHeight);
+
+            Point eastConnection = new Point(topLeftCorner_X + tileWidth, origin.Y);
+            Point westConnection = new Point(topLeftCorner_X, origin.Y);
+
+            switch (conduit.Connection)
             {
-                for (int x = 0; x < tintedBackground.Width; x++)
-                {
-                    tintedBackground.SetPixel(x, y, ColorCell(element));
-                }
+                case Connection.W:
+                    drawPoints.Add(westConnection);
+                    break;
+                case Connection.E:
+                    drawPoints.Add(eastConnection);
+                    break;
+                case Connection.EW:
+                    drawPoints.Add(eastConnection);
+                    drawPoints.Add(westConnection);
+                    break;
+                case Connection.N:
+                    drawPoints.Add(northConnection);
+                    break;
+                case Connection.NW:
+                    drawPoints.Add(northConnection);
+                    drawPoints.Add(westConnection);
+                    break;
+                case Connection.NE:
+                    drawPoints.Add(northConnection);
+                    drawPoints.Add(eastConnection);
+                    break;
+                case Connection.NEW:
+                    drawPoints.Add(northConnection);
+                    drawPoints.Add(eastConnection);
+                    drawPoints.Add(westConnection);
+                    break;
+                case Connection.S:
+                    drawPoints.Add(southConnection);
+                    break;
+                case Connection.SW:
+                    drawPoints.Add(southConnection);
+                    drawPoints.Add(westConnection);
+                    break;
+                case Connection.ES:
+                    drawPoints.Add(eastConnection);
+                    drawPoints.Add(southConnection);
+                    break;
+                case Connection.ESW:
+                    drawPoints.Add(eastConnection);
+                    drawPoints.Add(southConnection);
+                    drawPoints.Add(westConnection);
+                    break;
+                case Connection.NS:
+                    drawPoints.Add(northConnection);
+                    drawPoints.Add(southConnection);
+                    break;
+                case Connection.NSW:
+                    drawPoints.Add(northConnection);
+                    drawPoints.Add(southConnection);
+                    drawPoints.Add(westConnection);
+                    break;
+                case Connection.NSE:
+                    drawPoints.Add(northConnection);
+                    drawPoints.Add(southConnection);
+                    drawPoints.Add(eastConnection);
+                    break;
+                case Connection.NESW:
+                    drawPoints.Add(northConnection);
+                    drawPoints.Add(eastConnection);
+                    drawPoints.Add(southConnection);
+                    drawPoints.Add(westConnection);
+                    break;
+                case Connection.None:
+                    drawPoints.Add(origin);
+                    break;
+                default:
+                    break;
             }
 
-            Graphics merger = Graphics.FromImage(tintedBackground);
-            merger.DrawImage(tintedBackground, 0, 0, 50, 50);
-            merger.DrawImage(buildingAsset, 0, 0, 50, 50);
-
-            return tintedBackground;
+            return drawPoints;
         }
 
-        /// <summary>
-        /// Adds a back color to the canvasBlock for the corresponding <see cref="Element"/>
-        /// </summary>
-        /// <param name="elementInCell"></param>
-        /// <param name="canvasBlock"></param>
-        protected Color ColorCell(Element elementInCell)
+        protected List<Point> GetBridgeDrawPoints(Building conduit)
         {
-            switch (elementInCell)
+            List<Point> drawPoints = new List<Point>();
+            int topLeftCorner_X = tileWidth * GetCanvasBlock_Column(conduit.Location_X, blueprintToPaint.X_NormalizeFactor);
+            int topLeftCorner_Y = tileHeight * GetCanvasBlock_Row(conduit.Location_Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y);
+
+            Point arcOrigin = new Point(topLeftCorner_X, topLeftCorner_Y);
+            drawPoints.Add(arcOrigin);
+
+            switch (conduit.Rotation)
             {
-                case Element.Algae:
-                    return System.Drawing.Color.SeaGreen;
-                case Element.Dirt:
-                    return System.Drawing.Color.RosyBrown;
-                case Element.Obsidian:
-                    return System.Drawing.Color.Black;
-                case Element.OxyRock:
-                    return System.Drawing.Color.Aquamarine;
-                case Element.SandStone:
-                    return System.Drawing.Color.SandyBrown;
-                case Element.IronOre:
-                    return System.Drawing.Color.IndianRed;
-                case Element.Oxygen:
-                    return System.Drawing.Color.Cyan;
-                case Element.SedimentaryRock:
-                    return System.Drawing.Color.BurlyWood;
-                case Element.Cuprite:
-                    return System.Drawing.Color.Crimson;
-                case Element.Wolframite:
-                    return System.Drawing.Color.DarkGray;
+                case 90:
+                case 270:
+                    Point northOrigin = new Point(arcOrigin.X + (tileWidth / 2), arcOrigin.Y);
+                    Point northEnd = new Point(northOrigin.X, northOrigin.Y - (tileHeight / 2));
+                    Point southOrigin = new Point(arcOrigin.X + (tileWidth / 2), arcOrigin.Y + tileHeight);
+                    Point southEnd = new Point(southOrigin.X, southOrigin.Y + (tileHeight / 2));
+
+                    drawPoints.Add(northOrigin);
+                    drawPoints.Add(northEnd);
+                    drawPoints.Add(southOrigin);
+                    drawPoints.Add(southEnd);
+                    break;
                 default:
-                    return Color.Yellow;
+                    Point eastOrigin = new Point(arcOrigin.X, arcOrigin.Y + (tileHeight / 2));
+                    Point eastEnd = new Point(eastOrigin.X - (tileWidth / 2), eastOrigin.Y);
+                    Point westOrigin = new Point(arcOrigin.X + tileWidth, arcOrigin.Y + (tileHeight / 2));
+                    Point westEnd = new Point(westOrigin.X + (tileWidth / 2), westOrigin.Y);
+
+                    drawPoints.Add(eastOrigin);
+                    drawPoints.Add(eastEnd);
+                    drawPoints.Add(westOrigin);
+                    drawPoints.Add(westEnd);
+                    break;
             }
+
+            return drawPoints;
         }
 
         /// <summary>
@@ -109,19 +187,6 @@ namespace ONI_Blueprint_Parser.Painting
         protected static int GetCanvasBlock_Row(int locationY, int Y_NormalizeFactor, int maxY)
         {
             return (maxY - 1) - (locationY + Y_NormalizeFactor);
-        }
-
-        protected Image ChangeOpacity(Image img, float opacityvalue)
-        {
-            Bitmap bmp = new Bitmap(img.Width, img.Height); // Determining Width and Height of Source Image
-            Graphics graphics = Graphics.FromImage(bmp);
-            ColorMatrix colormatrix = new ColorMatrix();
-            colormatrix.Matrix33 = opacityvalue;
-            ImageAttributes imgAttribute = new ImageAttributes();
-            imgAttribute.SetColorMatrix(colormatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
-            graphics.DrawImage(img, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, imgAttribute);
-            graphics.Dispose();   // Releasing all resource used by graphics 
-            return bmp;
         }
     }
 }

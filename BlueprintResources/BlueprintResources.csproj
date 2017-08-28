@@ -74,6 +74,21 @@
   <ItemGroup>
     <None Include="Resources\electric_0.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electric_All.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electric_corner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electric_Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electric_T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electric_Single.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

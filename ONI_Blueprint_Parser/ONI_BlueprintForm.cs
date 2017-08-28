@@ -2,6 +2,7 @@
 using ONI_Blueprint_Parser.Painting;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ONI_Blueprint_Parser
@@ -43,7 +44,7 @@ namespace ONI_Blueprint_Parser
                 {
                     recentBlueprints.Insert(0, newBlueprint);
                     UpdateRecentlyOpened();
-                    LoadBlueprint(recentBlueprints[0]);
+                    PaintBlueprint(recentBlueprints[0]);
                 }
             }
             catch(Exception e)
@@ -52,11 +53,11 @@ namespace ONI_Blueprint_Parser
             }
         }
 
-        private void LoadBlueprint(Blueprint blueprint)
+        private void PaintBlueprint(Blueprint blueprint)
         {
             buildingTabPage.Controls.Clear();
             BitmapPainter blueprintPainter = new BuildingPainter(blueprint, iconToolTip);
-            System.Drawing.Image paintedBlueprint = ((blueprintPainter as BuildingPainter).Paint());
+            Image paintedBlueprint = ((blueprintPainter as BuildingPainter).Paint());
             buildingTabPage.Controls.Add(new PictureBox()
                 {
                     Image = paintedBlueprint,
@@ -66,10 +67,21 @@ namespace ONI_Blueprint_Parser
 
             electricTabPage.Controls.Clear();
             blueprintPainter = new ElectricalPainter(blueprint, iconToolTip, paintedBlueprint);
-            paintedBlueprint = (blueprintPainter as ElectricalPainter).Paint();
+            Image electricOverlay = (blueprintPainter as ElectricalPainter).Paint();
             electricTabPage.Controls.Add(
                 new PictureBox() {
-                    Image = paintedBlueprint,
+                    Image = electricOverlay,
+                    Size = paintedBlueprint.Size,
+                    BackColor = System.Drawing.Color.DimGray
+                });
+
+            liquidTabPage.Controls.Clear();
+            blueprintPainter = new LiquidPainter(blueprint, iconToolTip, paintedBlueprint);
+            Image liquidOverlay = (blueprintPainter as LiquidPainter).Paint();
+            liquidTabPage.Controls.Add(
+                new PictureBox()
+                {
+                    Image = liquidOverlay,
                     Size = paintedBlueprint.Size,
                     BackColor = System.Drawing.Color.DimGray
                 });
@@ -86,7 +98,7 @@ namespace ONI_Blueprint_Parser
                 item.Click += new EventHandler(
                     (object sender, EventArgs e) => 
                     {
-                        LoadBlueprint(blueprint);
+                        PaintBlueprint(blueprint);
                     });
                 recentlyLoadedToolStripMenuItem.DropDownItems.Add(item);
             }

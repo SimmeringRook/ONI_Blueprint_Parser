@@ -21,7 +21,7 @@ namespace ONI_Blueprint_Parser.Painting
 
             foreach (Building building in blueprintToPaint.Buildings)
             {
-                if (building.ID.Value == EntityID.Wire)
+                if (building.ID.Value == EntityID.Wire || building.ID.Value == EntityID.HighWattageWire)
                 {
                     int loc_X = tileWidth * GetCanvasBlock_Column(building.Location_X, blueprintToPaint.X_NormalizeFactor);
                     int loc_Y = tileHeight * GetCanvasBlock_Row(building.Location_Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y);

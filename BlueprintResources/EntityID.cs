@@ -13,6 +13,7 @@
         #region Buildings - Power
         Wire,
         HighWattageWire,
+        WireBridge,
 
         ManualGenerator,
         PowerTransformer,
@@ -22,11 +23,15 @@
         #endregion
         #region Buildings - Liquid
         LiquidConduit,
+        InsulatedLiquidConduit,
+        LiquidConduitBridge,
         LiquidVent,
 
         #endregion
         #region Buildings - Gas
         GasConduit,
+        InsulatedGasConduit,
+        GasConduitBridge,
 
         #endregion
         #region Floor Tiles

@@ -241,6 +241,10 @@ namespace ONI_Blueprint_Parser.Parser
                     case "location_y":
                         tempBuilding.Location_Y = int.Parse(data[1]);
                         break;
+                    case "rotationOrientation":
+                        string rotation = data[1].Substring(2);
+                        tempBuilding.Rotation = int.Parse(rotation);
+                        break;
                     case "storage":
                     case "rottable":
                     case "amounts":
@@ -251,13 +255,12 @@ namespace ONI_Blueprint_Parser.Parser
                     case "other_values":
                         if (tempBuilding.ID.HasValue)
                         {
-
                             Cell associatedCell = Cells.Where(c =>
                             c.Location_X == tempBuilding.Location_X &&
                             c.Location_Y == tempBuilding.Location_Y).FirstOrDefault();
                             if (associatedCell != null)
                             {
-                                tempBuilding = new Building(tempBuilding.ID.Value, tempBuilding.Connection, associatedCell);
+                                tempBuilding = new Building(tempBuilding.ID.Value, tempBuilding.Connection, associatedCell, tempBuilding.Rotation);
                             }
 
                             parsedBuildings.Add(tempBuilding); //assume complete object, add and create new holder
