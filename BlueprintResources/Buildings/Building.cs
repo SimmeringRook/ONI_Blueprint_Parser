@@ -18,6 +18,7 @@ namespace BlueprintResources.Buildings
         public int Rotation;
 
         public Image Sprite;
+        public Image Sprite_Outline;
 
         public Building()
         {

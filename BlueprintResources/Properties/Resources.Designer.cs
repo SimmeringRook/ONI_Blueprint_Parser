@@ -73,26 +73,6 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cable {
-            get {
-                object obj = ResourceManager.GetObject("cable", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap femaleending {
-            get {
-                object obj = ResourceManager.GetObject("femaleending", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Headquarters_Outline {
             get {
                 object obj = ResourceManager.GetObject("Headquarters_Outline", resourceCulture);
@@ -103,9 +83,9 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ljunction {
+        internal static System.Drawing.Bitmap rationBox {
             get {
-                object obj = ResourceManager.GetObject("ljunction", resourceCulture);
+                object obj = ResourceManager.GetObject("rationBox", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,39 +93,9 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap maleending {
+        internal static System.Drawing.Bitmap rationBox_Outline {
             get {
-                object obj = ResourceManager.GetObject("maleending", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap noconnections {
-            get {
-                object obj = ResourceManager.GetObject("noconnections", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rationBox_206 {
-            get {
-                object obj = ResourceManager.GetObject("rationBox_206", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap RationBox_Outline {
-            get {
-                object obj = ResourceManager.GetObject("RationBox_Outline", resourceCulture);
+                object obj = ResourceManager.GetObject("rationBox_Outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,16 +106,6 @@ namespace BlueprintResources.Properties {
         internal static System.Drawing.Bitmap Tile_Outline {
             get {
                 object obj = ResourceManager.GetObject("Tile_Outline", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap tjunction {
-            get {
-                object obj = ResourceManager.GetObject("tjunction", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,6 +133,36 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap wire_Cable {
+            get {
+                object obj = ResourceManager.GetObject("wire_Cable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_Cable_Outline {
+            get {
+                object obj = ResourceManager.GetObject("wire_Cable_Outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_FemaleEnding {
+            get {
+                object obj = ResourceManager.GetObject("wire_FemaleEnding", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap wire_FemaleEnding_Outline {
             get {
                 object obj = ResourceManager.GetObject("wire_FemaleEnding_Outline", resourceCulture);
@@ -203,9 +173,9 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap wire_XJunction_Outline {
+        internal static System.Drawing.Bitmap wire_LJunction {
             get {
-                object obj = ResourceManager.GetObject("wire_XJunction_Outline", resourceCulture);
+                object obj = ResourceManager.GetObject("wire_LJunction", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +183,89 @@ namespace BlueprintResources.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap xjunction {
+        internal static System.Drawing.Bitmap wire_LJunction_Outline {
             get {
-                object obj = ResourceManager.GetObject("xjunction", resourceCulture);
+                object obj = ResourceManager.GetObject("wire_LJunction_Outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_MaleEnding {
+            get {
+                object obj = ResourceManager.GetObject("wire_MaleEnding", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_MaleEnding_Outline {
+            get {
+                object obj = ResourceManager.GetObject("wire_MaleEnding_Outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_NoConnections {
+            get {
+                object obj = ResourceManager.GetObject("wire_NoConnections", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_NoConnections_Outline {
+            get {
+                object obj = ResourceManager.GetObject("wire_NoConnections_Outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_TJunction {
+            get {
+                object obj = ResourceManager.GetObject("wire_TJunction", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_TJunction_Outline {
+            get {
+                object obj = ResourceManager.GetObject("wire_TJunction_Outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_XJunction {
+            get {
+                object obj = ResourceManager.GetObject("wire_XJunction", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wire_XJunction_Outline {
+            get {
+                object obj = ResourceManager.GetObject("wire_XJunction_Outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

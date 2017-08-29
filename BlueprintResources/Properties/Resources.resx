@@ -121,49 +121,64 @@
   <data name="BatteryMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\buildings\power\batterymedium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\cable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="femaleending" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\femaleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Headquarters_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\buildings\base\headquarters_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ljunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\ljunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="maleending" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\maleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="noconnections" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\noconnections.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rationBox_206" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buildings\food\rationbox_206.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RationBox_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buildings\food\rationbox_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tile_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\buildings\base\tile_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tjunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\tjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wire_Bridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_bridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wire_Bridge_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\electrical\wire_bridge_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="wire_Cable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_cable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_Cable_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_cable_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_FemaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_femaleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="wire_FemaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\electrical\wire_femaleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_LJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_ljunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_LJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_ljunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_MaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_maleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_MaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_maleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_NoConnections" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_noconnections.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_NoConnections_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_noconnections_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_TJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_tjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_TJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_tjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wire_XJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\electrical\wire_xjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wire_XJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\electrical\wire_xjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="xjunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\xjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rationBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\buildings\food\rationbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_Bridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_bridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rationBox_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\buildings\food\rationbox_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

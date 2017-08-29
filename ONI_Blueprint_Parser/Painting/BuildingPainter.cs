@@ -1,8 +1,9 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using BlueprintResources;
 using System.Drawing;
 using BlueprintResources.Buildings;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace ONI_Blueprint_Parser.Painting
 {
@@ -16,53 +17,27 @@ namespace ONI_Blueprint_Parser.Painting
         public new Image Paint()
         {
             Image blueprintBase = base.Paint();
-            Graphics blueprintCanvas = Graphics.FromImage(blueprintBase);
-            blueprintCanvas.Clear(Color.Transparent);
 
-            foreach (Building building in blueprintToPaint.Buildings)
+            using (Graphics blueprintCanvas = Graphics.FromImage(blueprintBase))
             {
-                int loc_X = (tileWidth * GetCanvasBlock_Column(building.Location.X, blueprintToPaint.X_NormalizeFactor)) - (tileWidth * building.Offset.X);
-                int loc_Y = (tileHeight * GetCanvasBlock_Row(building.Location.Y, blueprintToPaint.Y_NormalizeFactor, blueprintToPaint.Size_Y)) - (tileHeight * building.Offset.Y);
+                blueprintCanvas.Clear(Color.Transparent);
 
-                try
-                {
-                    if (building.ID == EntityID.Headquarters || 
-                        building.ID == EntityID.RationBox || 
-                        building.ID == EntityID.Tile || 
-                        building.ID == EntityID.BatteryMedium)
-                    {
-                        blueprintCanvas.DrawImage(building.Sprite, loc_X, loc_Y, tileWidth * building.Size.Width, tileHeight * building.Size.Height);
-                        //Image buildingAsset = BuildingAssetManager.GetImage(building);
-                        //switch (building.ID.Value)
-                        //{
-                        //    case EntityID.Headquarters:
-                        //        blueprintCanvas.DrawImage(buildingAsset, loc_X, loc_Y, tileWidth * 4, tileHeight * 4);
-                        //        break;
-                        //    case EntityID.RationBox:
-                        //        blueprintCanvas.DrawImage(buildingAsset, loc_X, loc_Y - tileHeight, tileWidth * 2, tileHeight * 2);
-                        //        break;
-                        //    case EntityID.Tile:
-                        //        blueprintCanvas.DrawImage(buildingAsset, loc_X, loc_Y, tileWidth, tileHeight);
-                        //        break;
-                        //    case EntityID.BatteryMedium:
-                        //        blueprintCanvas.DrawImage(buildingAsset, loc_X, loc_Y - tileHeight, tileWidth * 2, tileHeight * 2);
-                        //        break;
-                        //    case EntityID.WireBridge:
-                        //        blueprintCanvas.DrawImage(buildingAsset, loc_X - tileWidth, loc_Y, tileWidth * 3, tileHeight);
-                        //        break;
-                        //    default:
-                        //        break;
-                        //}
-                    }
-
-                }
-                catch (Exception e)
-                {
-                    MessageBox.Show("Bitmap: " + e.Message);
-                }
+                DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.Wire || b.ID == EntityID.HighWattageWire).ToList());
+                DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.WireBridge).ToList());
+                DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID != EntityID.Wire && b.ID != EntityID.HighWattageWire && b.ID != EntityID.WireBridge).ToList());
             }
-
             return blueprintBase;
+        }
+
+        protected void DrawBuildings(Graphics blueprintCanvas, List<Building> buildingsToDraw)
+        {
+            foreach (Building building in buildingsToDraw)
+            {
+                Point spriteLocation = GetNormalizedPoint(building);
+                Size paintSize = new Size(tileWidth * building.Size.Width, tileHeight * building.Size.Height);
+
+                blueprintCanvas.DrawImage(GetRotatedImage(building.Sprite, building.Rotation), spriteLocation.X, spriteLocation.Y, paintSize.Width, paintSize.Height);
+            }
         }
     }
 }

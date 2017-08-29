@@ -68,49 +68,33 @@
     <None Include="Resources\Buildings\Base\Headquarters_Outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Buildings\Food\RationBox_Outline.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Buildings\Base\Tile_Outline.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\cable.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\femaleending.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\ljunction.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\maleending.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\noconnections.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\tjunction.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\xjunction.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Buildings\Food\rationBox_206.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Buildings\Power\BatteryMedium.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Resources\Electrical\wire_Bridge_Outline.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\wire_FemaleEnding_Outline.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\wire_XJunction_Outline.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Electrical\wire_Bridge.png" />
+    <Content Include="Resources\Buildings\Food\rationBox.png" />
+    <Content Include="Resources\Buildings\Food\rationBox_Outline.png" />
+    <Content Include="Resources\Electrical\wire_Bridge.png" />
+    <Content Include="Resources\Electrical\wire_Bridge_Outline.png" />
+    <Content Include="Resources\Electrical\wire_Cable.png" />
+    <Content Include="Resources\Electrical\wire_Cable_Outline.png" />
+    <Content Include="Resources\Electrical\wire_FemaleEnding.png" />
+    <Content Include="Resources\Electrical\wire_FemaleEnding_Outline.png" />
+    <Content Include="Resources\Electrical\wire_LJunction.png" />
+    <Content Include="Resources\Electrical\wire_LJunction_Outline.png" />
+    <Content Include="Resources\Electrical\wire_MaleEnding.png" />
+    <Content Include="Resources\Electrical\wire_MaleEnding_Outline.png" />
+    <Content Include="Resources\Electrical\wire_NoConnections.png" />
+    <Content Include="Resources\Electrical\wire_NoConnections_Outline.png" />
+    <Content Include="Resources\Electrical\wire_TJunction.png" />
+    <Content Include="Resources\Electrical\wire_TJunction_Outline.png" />
+    <Content Include="Resources\Electrical\wire_XJunction.png" />
+    <Content Include="Resources\Electrical\wire_XJunction_Outline.png" />
+    <None Include="Resources\RationBox_Outline.png" />
+    <None Include="Resources\rationBox.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
