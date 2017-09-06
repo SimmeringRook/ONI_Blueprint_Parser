@@ -55,6 +55,7 @@
     <Compile Include="Painting\BitmapPainter.cs" />
     <Compile Include="Painting\BuildingPainter.cs" />
     <Compile Include="Painting\ElectricalPainter.cs" />
+    <Compile Include="Painting\GasPainter.cs" />
     <Compile Include="Painting\LiquidPainter.cs" />
     <Compile Include="Parser\Parser.cs" />
     <Compile Include="Program.cs" />

@@ -85,6 +85,17 @@ namespace ONI_Blueprint_Parser
                     Size = paintedBlueprint.Size,
                     BackColor = System.Drawing.Color.DimGray
                 });
+
+            gasTabPage.Controls.Clear();
+            blueprintPainter = new GasPainter(blueprint, iconToolTip, paintedBlueprint);
+            Image gasOverlay = (blueprintPainter as GasPainter).Paint();
+            gasTabPage.Controls.Add(
+                new PictureBox()
+                {
+                    Image = gasOverlay,
+                    Size = paintedBlueprint.Size,
+                    BackColor = System.Drawing.Color.DimGray
+                });
         }
 
         private void UpdateRecentlyOpened()

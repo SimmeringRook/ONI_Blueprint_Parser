@@ -14,169 +14,84 @@ namespace BlueprintResources.Buildings
         /// </summary>
         /// <param name="buildingName"></param>
         /// <returns></returns>
-        public static Image GetImage(Building building)
+        public static Image GetImage(Building building, bool outline = false)
         {
-            switch (building.ID)
-            {
-                case EntityID.Tile:
-                    return Properties.Resources.Tile_Outline;
-                case EntityID.RationBox:
-                    return Properties.Resources.rationBox;
-                case EntityID.Headquarters:
-                    return Properties.Resources.Headquarters_Outline;
-                case EntityID.Wire:
-                case EntityID.HighWattageWire:
-                    return GetWire(building);
-                case EntityID.BatteryMedium:
-                    return Properties.Resources.BatteryMedium;
-                case EntityID.WireBridge:
-                    return Properties.Resources.wire_Bridge;
-                default:
-                    throw new System.Exception("Could not find the image for: " + building.ID.ToString());
-            }
+            string imageName = building.ID.ToString() + GetConnectionSuffix(building.Connection);
+            if (outline)
+                imageName += "_Outline";
+
+            RotateFlipType rotation = GetRotation(building.Connection);
+            Image importedSprite = Properties.Resources.ResourceManager.GetObject(imageName) as Image;
+                
+            importedSprite.RotateFlip(rotation);
+
+            return importedSprite;
         }
 
-        private static Image GetWire(Building wire)
+        private static RotateFlipType GetRotation(Connection connection)
         {
-            Image rotatedImage;
-            switch (wire.Connection)
+            switch (connection)
             {
-                case Connection.W:
-                    return Properties.Resources.wire_MaleEnding;
-                case Connection.E:
-                    rotatedImage = Properties.Resources.wire_MaleEnding;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
-                    return rotatedImage;
-                case Connection.EW:
-                    return Properties.Resources.wire_Cable;
                 case Connection.N:
-                    rotatedImage = Properties.Resources.wire_MaleEnding;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    return rotatedImage;
-                case Connection.NW:
-                    rotatedImage = Properties.Resources.wire_LJunction;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipX);
-                    return rotatedImage;
-                case Connection.NE:
-                    rotatedImage = Properties.Resources.wire_LJunction;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
-                    return rotatedImage;
-                case Connection.NEW:
-                    rotatedImage = Properties.Resources.wire_TJunction;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
-                    return rotatedImage;
-                case Connection.S:
-                    rotatedImage = Properties.Resources.wire_MaleEnding;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipY);
-                    return rotatedImage;
-                case Connection.SW:
-                    return Properties.Resources.wire_LJunction;
-                case Connection.ES:
-                    rotatedImage = Properties.Resources.wire_LJunction;
-                    rotatedImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
-                    return rotatedImage;
-                case Connection.ESW:
-                    return Properties.Resources.wire_TJunction;
-                case Connection.NS:
-                    rotatedImage = Properties.Resources.wire_Cable;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    return rotatedImage;
-                case Connection.NSW:
-                    rotatedImage = Properties.Resources.wire_TJunction;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    return rotatedImage;
-                case Connection.NSE:
-                    rotatedImage = Properties.Resources.wire_TJunction;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipX);
-                    return rotatedImage;
-                case Connection.NESW:
-                    return Properties.Resources.wire_XJunction;
-                case Connection.None:
-                default:
-                    return Properties.Resources.wire_NoConnections;
-            }
-        }
-
-        public static Image GetOutline(Building building)
-        {
-            switch (building.ID)
-            {
-                case EntityID.Tile:
-                    return Properties.Resources.Tile_Outline;
-                case EntityID.RationBox:
-                    return Properties.Resources.rationBox_Outline;
-                case EntityID.Headquarters:
-                    return Properties.Resources.Headquarters_Outline;
-                case EntityID.Wire:
-                case EntityID.HighWattageWire:
-                    return GetWireOutline(building);
-                case EntityID.BatteryMedium:
-                    return Properties.Resources.BatteryMedium;
-                case EntityID.WireBridge:
-                    return Properties.Resources.wire_Bridge_Outline;
-                default:
-                    throw new System.Exception("Could not find the image for: " + building.ID.ToString());
-            }
-        }
-
-        private static Image GetWireOutline(Building wire)
-        {
-            Image rotatedImage;
-            switch (wire.Connection)
-            {
-                case Connection.W:
-                    return Properties.Resources.wire_MaleEnding_Outline;
+                    return RotateFlipType.Rotate90FlipNone;
                 case Connection.E:
-                    rotatedImage = Properties.Resources.wire_MaleEnding_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
-                    return rotatedImage;
-                case Connection.EW:
-                    return Properties.Resources.wire_Cable_Outline;
-                case Connection.N:
-                    rotatedImage = Properties.Resources.wire_MaleEnding_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    return rotatedImage;
-                case Connection.NW:
-                    rotatedImage = Properties.Resources.wire_LJunction_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipX);
-                    return rotatedImage;
-                case Connection.NE:
-                    rotatedImage = Properties.Resources.wire_LJunction_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
-                    return rotatedImage;
-                case Connection.NEW:
-                    rotatedImage = Properties.Resources.wire_TJunction_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
-                    return rotatedImage;
+                    return RotateFlipType.Rotate180FlipNone;
                 case Connection.S:
-                    rotatedImage = Properties.Resources.wire_MaleEnding_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipY);
-                    return rotatedImage;
-                case Connection.SW:
-                    return Properties.Resources.wire_LJunction_Outline;
-                case Connection.ES:
-                    rotatedImage = Properties.Resources.wire_LJunction_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.RotateNoneFlipX);
-                    return rotatedImage;
-                case Connection.ESW:
-                    return Properties.Resources.wire_TJunction_Outline;
+                    return RotateFlipType.Rotate90FlipY;
                 case Connection.NS:
-                    rotatedImage = Properties.Resources.wire_Cable_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    return rotatedImage;
+                    return RotateFlipType.Rotate90FlipNone;
+                case Connection.NW:
+                    return RotateFlipType.Rotate180FlipX;
+                case Connection.NE:
+                    return RotateFlipType.Rotate180FlipNone;
+                case Connection.ES:
+                    return RotateFlipType.RotateNoneFlipX;
+                case Connection.NEW:
+                    return RotateFlipType.Rotate180FlipNone;
                 case Connection.NSW:
-                    rotatedImage = Properties.Resources.wire_TJunction_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                    return rotatedImage;
+                    return RotateFlipType.Rotate90FlipNone;
                 case Connection.NSE:
-                    rotatedImage = Properties.Resources.wire_TJunction_Outline;
-                    rotatedImage.RotateFlip(RotateFlipType.Rotate90FlipX);
-                    return rotatedImage;
+                    return RotateFlipType.Rotate90FlipX;
+                case Connection.W:
+                case Connection.EW:
+                case Connection.SW:
+                case Connection.ESW:
                 case Connection.NESW:
-                    return Properties.Resources.wire_XJunction_Outline;
                 case Connection.None:
+                case Connection.Null:
                 default:
-                    return Properties.Resources.wire_NoConnections_Outline;
+                    return RotateFlipType.RotateNoneFlipNone;
+            }
+        }
+
+        private static string GetConnectionSuffix(Connection connection)
+        {
+            switch (connection)
+            {
+                case Connection.N:
+                case Connection.E:
+                case Connection.S:
+                case Connection.W:
+                    return "_MaleEnding";
+                case Connection.NS:
+                case Connection.EW:
+                    return "_TwoWay";
+                case Connection.NW:
+                case Connection.NE:
+                case Connection.ES:
+                case Connection.SW:
+                    return "_LJunction";
+                case Connection.NEW:
+                case Connection.NSW:
+                case Connection.NSE:
+                case Connection.ESW:
+                    return "_TJunction";
+                case Connection.NESW:
+                    return "_XJunction";
+                case Connection.None:
+                case Connection.Null:
+                default:
+                    return "";
             }
         }
     }

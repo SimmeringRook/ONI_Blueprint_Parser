@@ -20,6 +20,7 @@
         NS = 12,
         NSW = 13,
         NSE = 14,
-        NESW = 15
+        NESW = 15,
+        Null = 16
     }
 }

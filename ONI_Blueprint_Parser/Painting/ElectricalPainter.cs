@@ -1,6 +1,4 @@
 ﻿using BlueprintResources;
-using BlueprintResources.Buildings;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -23,19 +21,28 @@ namespace ONI_Blueprint_Parser.Painting
 
                 DrawOutlines(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.Wire || b.ID == EntityID.HighWattageWire).ToList());
                 DrawOutlines(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.WireBridge).ToList());
+
+                DrawOutlines(blueprintCanvas, blueprintToPaint.Buildings.Where(b => 
+                b.ID == EntityID.ManualGenerator ||
+                b.ID == EntityID.Generator ||
+                b.ID == EntityID.HydrogenGenerator ||
+                b.ID == EntityID.MethaneGenerator ||
+                b.ID == EntityID.Battery ||
+                b.ID == EntityID.BatteryMedium ||
+                b.ID == EntityID.PowerTransformer ||
+                b.ID == EntityID.AirConditioner ||
+                b.ID == EntityID.LiquidConditioner ||
+                b.ID == EntityID.SpaceHeater ||
+                b.ID == EntityID.LiquidHeater).ToList());
+
+                DrawOutlines(blueprintCanvas, blueprintToPaint.Buildings.Where(b => 
+                b.ID == EntityID.Switch ||
+                b.ID == EntityID.TemperatureControlledSwitch ||
+                b.ID == EntityID.PressureSwitchLiquid ||
+                b.ID == EntityID.PressureSwitchGas).ToList());
+
             }
             return paintedBlueprint;
-        }
-
-        protected void DrawOutlines(Graphics blueprintCanvas, List<Building> buildingsToDraw)
-        {
-            foreach (Building building in buildingsToDraw)
-            {
-                Point spriteLocation = GetNormalizedPoint(building);
-                Size paintSize = new Size(tileWidth * building.Size.Width, tileHeight * building.Size.Height);
-
-                blueprintCanvas.DrawImage(GetRotatedImage(building.Sprite_Outline, building.Rotation), spriteLocation.X, spriteLocation.Y, paintSize.Width, paintSize.Height);
-            }
         }
     }
 }

@@ -103,7 +103,7 @@ namespace ONI_Blueprint_Parser.Parser
             {
                 bluePrint = ParseBlueprintHeader(unparsedBlueprintHeader);
                 bluePrint.Cells = ParseCellData(unparsedCellData);
-                bluePrint.Buildings = ParseBuildingData(unparsedBuildingData, bluePrint.Cells);
+                bluePrint.Buildings = ParseBuildingData(unparsedBuildingData);
 
                 int minimumX = 0;
                 int minimumY = 0;
@@ -213,9 +213,8 @@ namespace ONI_Blueprint_Parser.Parser
         /// Parse raw string data from the .yaml into a collection of Buildings
         /// </summary>
         /// <param name="unparsedBuildingData"></param>
-        /// <param name="Cells"></param>
         /// <returns></returns>
-        private List<Building> ParseBuildingData(List<string> unparsedBuildingData, List<Cell> Cells)
+        private List<Building> ParseBuildingData(List<string> unparsedBuildingData)
         {
             List<Building> parsedBuildings = new List<Building>();
 
@@ -232,7 +231,7 @@ namespace ONI_Blueprint_Parser.Parser
                             break;
                         EntityID id = (EntityID)Enum.Parse(typeof(EntityID), data[1]);
                         if (id != EntityID.FieldRation)
-                            buildingInformation.ID = (EntityID)Enum.Parse(typeof(EntityID), data[1]);
+                            buildingInformation.ID = id;
                         break;
                     case "temperature":
                         break;
@@ -274,7 +273,7 @@ namespace ONI_Blueprint_Parser.Parser
             return new BuildingParameters()
             {
                 ID = EntityID.None,
-                Connection = Connection.None,
+                Connection = Connection.Null,
                 Location = new System.Drawing.Point(0, 0),
                 Rotation = 0
             };

@@ -118,67 +118,682 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AdvancedResearchCenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\station\advancedresearchcenter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdvancedResearchCenter_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\station\advancedresearchcenter_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AirConditioner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\airconditioner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AirConditioner_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\airconditioner_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AirFilter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\airfilter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AirFilter_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\airfilter_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlgaeDistillery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\refinement\algaedistillery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlgaeDistillery_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\refinement\algaedistillery_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlgaeHabitat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\algaehabitat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlgaeHabitat_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\algaehabitat_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\battery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BatteryMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buildings\power\batterymedium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\power\batterymedium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BatteryMedium_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\batterymedium_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battery_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\battery_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\bed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bed_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\bed_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BottleEmptier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\bottleemptier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BottleEmptier_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\bottleemptier_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Canvas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\decor\canvas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Canvas_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\decor\canvas_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CeilingLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\ceilinglight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CeilingLight_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\ceilinglight_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClothingFabricator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\station\clothingfabricator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ClothingFabricator_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\station\clothingfabricator_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CO2Scrubber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\co2scrubber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CO2Scrubber_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\co2scrubber_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Compost" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\refinement\compost.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Compost_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\refinement\compost_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CookingStation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\cookingstation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CookingStation_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\cookingstation_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DiningTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\diningtable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DiningTable_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\diningtable_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Door_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\door_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Electrolyzer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\electrolyzer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Electrolyzer_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\electrolyzer_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FarmTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\farmtile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FarmTile_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\farmtile_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FertilizerMaker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\refinement\fertilizermaker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FertilizerMaker_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\refinement\fertilizermaker_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FloorLamp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\floorlamp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FloorLamp_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\floorlamp_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlowerVase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\decor\flowervase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlowerVase_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\decor\flowervase_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlushToilet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\flushtoilet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlushToilet_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\flushtoilet_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduitBridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gasconduitbridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduitBridge_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gasconduitbridge_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_LJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_ljunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_LJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_ljunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_MaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_maleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_MaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_maleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_TJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_tjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_TJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_tjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_TwoWay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_twoway.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_TwoWay_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_twoway_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_XJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_xjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasConduit_XJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\pipe\gasconduit_xjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasFilter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gasfilter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasFilter_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gasfilter_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasPermeableMembrane" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\gaspermeablemembrane.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasPermeableMembrane_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\gaspermeablemembrane_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasPump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gaspump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasPump_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gaspump_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasValve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gasvalve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasValve_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gasvalve_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasVent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gasvent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GasVent_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\gasvent_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Generator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\generator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Generator_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\generator_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Grave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\decor\grave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Grave_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\decor\grave_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HandSanitizer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\medicine\handsanitizer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HandSanitizer_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\medicine\handsanitizer_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Headquarters" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\headquarters.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Headquarters_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buildings\base\headquarters_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\base\headquarters_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_FemaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_femaleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_FemaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_femaleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_LJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_ljunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_LJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_ljunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_MaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_maleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_MaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_maleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_TJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_tjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_TJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_tjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_TwoWay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_twoway.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_TwoWay_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_twoway_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_XJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_xjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HighWattageWire_XJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\highwattagewire\highwattagewire_xjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HydrogenGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\hydrogengenerator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HydrogenGenerator_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\hydrogengenerator_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HydroponicFarm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\hydroponicfarm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HydroponicFarm_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\hydroponicfarm_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_LJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_ljunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_LJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_ljunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_MaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_maleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_MaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_maleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_TJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_tjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_TJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_tjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_TwoWay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_twoway.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_TwoWay_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_twoway_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_XJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_xjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedGasConduit_XJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\ventilation\insulated_pipe\insulatedgasconduit_xjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_LJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_ljunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_LJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_ljunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_MaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_maleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_MaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_maleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_TJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_tjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_TJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_tjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_TwoWay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_twoway.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_TwoWay_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_twoway_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_XJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_xjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulatedLiquidConduit_XJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\insulated_pipe\insulatedliquidconduit_xjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulationTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\insulationtile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsulationTile_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\insulationtile_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ladder" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\ladder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ladder_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\ladder_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConditioner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\liquidconditioner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConditioner_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\liquidconditioner_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduitBridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidconduitbridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduitBridge_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidconduitbridge_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_LJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_ljunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_LJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_ljunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_MaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_maleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_MaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_maleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_TJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_tjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_TJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_tjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_TwoWay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_twoway.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_TwoWay_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_twoway_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_XJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_xjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidConduit_XJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\pipe\liquidconduit_xjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidCooledFan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\liquidcooledfan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidCooledFan_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\liquidcooledfan_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidFilter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidfilter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidFilter_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidfilter_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidHeater" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\liquidheater.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidHeater_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\liquidheater_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidPump" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidpump.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidPumpingStation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidpumpingstation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidPumpingStation_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidpumpingstation_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidPump_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidpump_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidValve" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidvalve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidValve_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidvalve_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidVent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidvent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LiquidVent_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\liquidvent_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ManualGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\manualgenerator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ManualGenerator_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\manualgenerator_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ManualPressureDoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\manualpressuredoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ManualPressureDoor_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\manualpressuredoor_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MassageTable" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\massagetable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MassageTable_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\furniture\massagetable_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MedicalBed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\medicine\medicalbed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MedicalBed_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\medicine\medicalbed_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MedicalCot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\medicine\medicalcot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MedicalCot_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\medicine\medicalcot_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MeshTile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\meshtile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MeshTile_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\meshtile_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MethaneGenerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\methanegenerator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MethaneGenerator_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\methanegenerator_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MicrobeMusher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\microbemusher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MicrobeMusher_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\microbemusher_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MineralDeoxidizer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\mineraldeoxidizer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MineralDeoxidizer_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\oxygen\mineraldeoxidizer_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OreScrubber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\orescrubber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OreScrubber_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\orescrubber_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Outhouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\outhouse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Outhouse_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\outhouse_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlanterBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\planterbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlanterBox_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\planterbox_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PowerTransformer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\powertransformer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PowerTransformer_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\powertransformer_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PressureDoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\pressuredoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PressureDoor_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\pressuredoor_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PressureSwitchGas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\pressureswitchgas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PressureSwitchGas_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\pressureswitchgas_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PressureSwitchLiquid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\pressureswitchliquid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PressureSwitchLiquid_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\pressureswitchliquid_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RationBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\rationbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RationBox_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\rationbox_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refrigerator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\refrigerator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refrigerator_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\food\refrigerator_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResearchCenter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\station\researchcenter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResearchCenter_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\station\researchcenter_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sculpture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\decor\sculpture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sculpture_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\decor\sculpture_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\shower.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shower_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\plumbing\shower_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpaceHeater" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\spaceheater.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SpaceHeater_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\utilities\spaceheater_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StorageLocker" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\storagelocker.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StorageLocker_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\storagelocker_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Switch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\switch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Switch_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\switch_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TemperatureControlledSwitch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\temperaturecontrolledswitch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TemperatureControlledSwitch_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\temperaturecontrolledswitch_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\base\tile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tile_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buildings\base\tile_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\resources\base\tile_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_Bridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_bridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WashBasin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\medicine\washbasin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_Bridge_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_bridge_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WashBasin_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\medicine\washbasin_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_Cable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_cable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WaterPurifier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\refinement\waterpurifier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_Cable_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_cable_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WaterPurifier_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\refinement\waterpurifier_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_FemaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_femaleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WireBridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\wirebridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_FemaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_femaleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WireBridge_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\wirebridge_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_LJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_ljunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_FemaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_femaleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_LJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_ljunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_FemaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_femaleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_MaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_maleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_LJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_ljunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_MaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_maleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_LJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_ljunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_NoConnections" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_noconnections.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_MaleEnding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_maleending.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_NoConnections_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_noconnections_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_MaleEnding_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_maleending_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_TJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_tjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_TJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_tjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_XJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_xjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_TJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_tjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wire_XJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\electrical\wire_xjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_TJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_tjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rationBox" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buildings\food\rationbox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_TwoWay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_twoway.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rationBox_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\buildings\food\rationbox_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Wire_TwoWay_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_twoway_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wire_XJunction" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_xjunction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wire_XJunction_Outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\power\electricalwire\wire_xjunction_outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

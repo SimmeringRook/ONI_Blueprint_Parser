@@ -16,6 +16,10 @@
 
         Vacuum,
         Oxygen,
-        CarbonDioxide
+        CarbonDioxide,
+        SteelDoor,
+
+        Clay
+
     }
 }

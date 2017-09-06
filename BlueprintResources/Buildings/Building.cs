@@ -8,7 +8,7 @@ namespace BlueprintResources.Buildings
         /// id property in .yaml
         /// </summary>
         public EntityID ID;
-        public Connection Connection = Connection.None;
+        public Connection Connection = Connection.Null;
 
         public Point Location;
 

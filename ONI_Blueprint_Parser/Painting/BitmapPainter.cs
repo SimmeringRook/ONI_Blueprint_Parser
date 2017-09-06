@@ -3,6 +3,7 @@ using BlueprintResources;
 using System.Drawing;
 using System.Drawing.Imaging;
 using BlueprintResources.Buildings;
+using System.Collections.Generic;
 
 namespace ONI_Blueprint_Parser.Painting
 {
@@ -30,6 +31,17 @@ namespace ONI_Blueprint_Parser.Painting
             Graphics blueprintCanvas = Graphics.FromImage(paintedBlueprint);
             
             return paintedBlueprint;
+        }
+
+        protected void DrawOutlines(Graphics blueprintCanvas, List<Building> buildingsToDraw)
+        {
+            foreach (Building building in buildingsToDraw)
+            {
+                Point spriteLocation = GetNormalizedPoint(building);
+                Size paintSize = new Size(tileWidth * building.Size.Width, tileHeight * building.Size.Height);
+
+                blueprintCanvas.DrawImage(GetRotatedImage(building.Sprite_Outline, building.Rotation), spriteLocation.X, spriteLocation.Y, paintSize.Width, paintSize.Height);
+            }
         }
 
         protected Point GetNormalizedPoint(Building building)
@@ -89,7 +101,7 @@ namespace ONI_Blueprint_Parser.Painting
                 default:
                     break;
             }
-            
+
             return rotatedSprite;
         }
     }

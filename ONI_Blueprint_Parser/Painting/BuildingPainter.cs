@@ -22,9 +22,26 @@ namespace ONI_Blueprint_Parser.Painting
             {
                 blueprintCanvas.Clear(Color.Transparent);
 
+                DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.GasConduit || b.ID == EntityID.InsulatedGasConduit).ToList());
+                DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.LiquidConduit || b.ID == EntityID.InsulatedLiquidConduit).ToList());
                 DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.Wire || b.ID == EntityID.HighWattageWire).ToList());
+
+                DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.GasConduitBridge).ToList());
+                DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.LiquidConduitBridge).ToList());
                 DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID == EntityID.WireBridge).ToList());
-                DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => b.ID != EntityID.Wire && b.ID != EntityID.HighWattageWire && b.ID != EntityID.WireBridge).ToList());
+
+                DrawBuildings(blueprintCanvas, blueprintToPaint.Buildings.Where(b => 
+                b.ID != EntityID.GasConduit &&
+                b.ID != EntityID.InsulatedGasConduit && 
+                b.ID != EntityID.GasConduitBridge &&
+                b.ID != EntityID.LiquidConduit &&
+                b.ID != EntityID.InsulatedLiquidConduit &&
+                b.ID != EntityID.LiquidConduitBridge &&
+                b.ID != EntityID.Wire &&
+                b.ID != EntityID.HighWattageWire &&
+                b.ID != EntityID.WireBridge
+                ).ToList());
+
             }
             return blueprintBase;
         }
